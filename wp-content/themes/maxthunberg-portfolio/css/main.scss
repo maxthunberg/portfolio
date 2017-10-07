@@ -13,17 +13,18 @@
 /* SPACING */
 /* ----------------------------------------------------- */
 
-  $general_font_size: 20px;
-  $gutter: 2em;
-  $vertical_spacing: $gutter*2;
+  $space: 16px;
+  $general_font_size: 16px;
+  $gutter: $space*4;
+  $vertical_spacing: $space*8;
 
 /* ----------------------------------------------------- */
 /* FONTS */
 /* ----------------------------------------------------- */
 
-  $font-stack1--light: RajdhaniLight;
-  $font-stack1--regular: RajdhaniRegular;
-  $font-stack1--Bold: RajdhaniBold;
+  $font-headings: SpaceMono-bold;
+  $font-subheadings: asdf;
+  $font-paragraf: asdf;
   $font-stack2: Calibri;
   $font-stack3: Georgia;
 
@@ -35,14 +36,32 @@
 /* COLORS */
 /* ----------------------------------------------------- */
 
-  $color-primary: #0DA53A;
-  $color-secondary--dark: #000100;
-  $color-secondary--light: #E7E7E7;
-  $color-accent-color1: #FDB010;
-  $color-accent-color2: #1BFF60;
-  $color-accent-color3: #139437;
-  $color-black: #000000;
+  /*Alfa laval*/
+  $color-projectone--primary: #23337E;
+
+  /*Agrowth*/
+  $color-projecttwo--primary: #ff6665;
+
+  /*Caribou*/
+  $color-projectthree--primary: #7BCE6A;
+
+  /*Castle of Sand*/
+  $color-projectfour--primary: #D1BE98;
+
+  /*INT3 Software*/
+  $color-projectfive--primary: #EB542D;
+  $color-projectfive--secondary: #101425;
+
+  /*Icon set*/
+  $color-projectsix--primary: #FE358B;
+
+  /*UI default colors*/
+
   $color-white: #ffffff;
+  $color-grey: #8C98A2;
+  $color-dark: #4F5C66;
+  $color-black: #1D242A;
+  $color-black--extra: #000000;
 
 /* ----------------------------------------------------- */
 /* MEDIA QUERY */
@@ -67,7 +86,7 @@
 
 html {
   font-size: $general_font_size;
-  font-family: $font-stack1--regular !important;
+  font-family: $font-paragraf !important;
   line-height: $font-size-line-height;
  }
 
@@ -75,12 +94,11 @@ html {
  /*********************** IMPORTS *************************/
  /* ----------------------------------------------------- */
 
-  @import "_grid";
-  @import "_header";
+
   @import "_typography";
-  @import "_home";
-  @import "_contact";
-  @import "_education";
+  @import "_carousel";
+  @import "_header";
+
 
 // @import "";
 

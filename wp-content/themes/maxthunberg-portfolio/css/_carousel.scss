@@ -1,0 +1,19 @@
+.carousel-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding:0;
+}
+
+.carousel-bg--dark  {
+background-color: $color-black;
+}
+
+.card {
+  width: $space*12;
+  height: $space*8;
+  background-color: $color-projectone--primary;
+}

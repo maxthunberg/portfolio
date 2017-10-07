@@ -6,9 +6,12 @@ Template Name: Home
 
 <?php get_header(); ?>
 <!--Home page -->
-<div class="Section Section--centercenter Section--100vh">
+<div class="carousel-bg carousel-bg--dark">
 
-<h1>Hello Wicked World!</h1>
+<div class="card">
+  <h1>Max Thunberg</h1>
+</div>
+
 </div>
 
 <?php get_footer(); ?>

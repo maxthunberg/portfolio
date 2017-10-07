@@ -42,3 +42,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('tether');
     // wp_enqueue_script('bootstrap');
 });
+
+//removes wp-toolbar
+add_filter('show_admin_bar', '__return_false');

@@ -3,23 +3,23 @@
 /* ----------------------------------------------------- */
 
 @font-face {
-  font-family:'RajdhaniBold';
-  src: url('./fonts/Rajdhani-Bold.ttf') format('truetype');
+  font-family:'GravurB';
+  src: url('./fonts/gb.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'RajdhaniRegular';
-  src: url('./fonts/Rajdhani-Regular.ttf') format('truetype');
+  font-family: 'GravurR';
+  src: url('./fonts/gr.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'RajdhaniSemibold';
-  src: url('./fonts/Rajdhani-Semibold.ttf') format('truetype');
+  font-family: 'GravurL';
+  src: url('./fonts/gl.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'RajdhaniLight';
-  src: url('/fonts/Rajdhani-Light.ttf') format('truetype');
+  font-family: 'Calibri';
+  src: url('/fonts/Calibri.otf') format('opentype');
 }
 
 /* ----------------------------------------------------- */
