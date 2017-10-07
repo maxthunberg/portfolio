@@ -1,0 +1,33 @@
+h1 {
+  font-size: 2em;
+  line-height: $font-size-line-height;
+  font-family: RajdhaniBold;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: $font-size-line-height;
+  font-family: RajdhaniSemibold;
+}
+
+h3 {
+  font-size: 1em;
+  font-family: RajdhaniLight;
+  line-height: $font-size-line-height;
+}
+
+p {
+  font-size: 1em;
+  line-height: $font-size-line-height;
+}
+
+a {
+  font-size: 0.8em;
+  line-height: $font-size-line-height;
+  font-family: RajdhaniBold;
+
+}
+
+.wordbreak {
+  word-spacing: 25vw;
+}

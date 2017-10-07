@@ -1,0 +1,89 @@
+/* ----------------------------------------------------- */
+/*********************** IMPORTS *************************/
+/* ----------------------------------------------------- */
+
+@import "_reset";
+@import "_imports";
+
+/* ----------------------------------------------------- */
+
+/********************** VARIABLES ************************/
+
+/* ----------------------------------------------------- */
+/* SPACING */
+/* ----------------------------------------------------- */
+
+  $general_font_size: 20px;
+  $gutter: 2em;
+  $vertical_spacing: $gutter*2;
+
+/* ----------------------------------------------------- */
+/* FONTS */
+/* ----------------------------------------------------- */
+
+  $font-stack1--light: RajdhaniLight;
+  $font-stack1--regular: RajdhaniRegular;
+  $font-stack1--Bold: RajdhaniBold;
+  $font-stack2: Calibri;
+  $font-stack3: Georgia;
+
+  $font-size-regular: 1em;
+  $font-size-line-height: 1.5em;
+  $font-size-line-height-sm: 1em;
+
+/* ----------------------------------------------------- */
+/* COLORS */
+/* ----------------------------------------------------- */
+
+  $color-primary: #0DA53A;
+  $color-secondary--dark: #000100;
+  $color-secondary--light: #E7E7E7;
+  $color-accent-color1: #FDB010;
+  $color-accent-color2: #1BFF60;
+  $color-accent-color3: #139437;
+  $color-black: #000000;
+  $color-white: #ffffff;
+
+/* ----------------------------------------------------- */
+/* MEDIA QUERY */
+/* ----------------------------------------------------- */
+
+  $mq_wide: 1920px;
+  $mq_standard: 1440px;
+  $mq_thin: 768px;
+  $mq_very_thin: 767px;
+
+/* ----------------------------------------------------- */
+/* ANIMATION */
+/* ----------------------------------------------------- */
+
+  $transition_default: all .2s ease-in-out;
+  $transition_duration: 0.4s;
+  $transition_ease: ease-in-out;
+
+/* ----------------------------------------------------- */
+/* CSS */
+/* ----------------------------------------------------- */
+
+html {
+  font-size: $general_font_size;
+  font-family: $font-stack1--regular !important;
+  line-height: $font-size-line-height;
+ }
+
+ /* ----------------------------------------------------- */
+ /*********************** IMPORTS *************************/
+ /* ----------------------------------------------------- */
+
+  @import "_grid";
+  @import "_header";
+  @import "_typography";
+  @import "_home";
+  @import "_contact";
+  @import "_education";
+
+// @import "";
+
+/* ----------------------------------------------------- */
+/* EDIT HERE */
+/* ----------------------------------------------------- */
