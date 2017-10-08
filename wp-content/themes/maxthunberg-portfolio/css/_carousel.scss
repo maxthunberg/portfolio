@@ -29,48 +29,47 @@ background-color: $color-projectone--primary;
   margin:32px;
   box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
   transition: $transition_default;
+  .active {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 768px;
+    height: 416px;
+    padding-left: 64px;
+    box-shadow: -16px 16px 32px rgba(0,0,0,0.3);
+    transition: $transition_default;
+    &:hover {
+      box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
+      transition: $transition_default;
+    }
+    &:active {
+      box-shadow: -2px 2px 4px rgba(0,0,0,0.7);
+      transition: $transition_default;
+    }
+  }
 }
 
-.card.active {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 768px;
-  height: 416px;
-  padding-left: 64px;
-  box-shadow: -16px 16px 32px rgba(0,0,0,0.3);
-  transition: $transition_default;
-}
 
-.card.active:hover {
-  box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
-  transition: $transition_default;
-}
-
-.card.one {
+.one {
   background-color: $color-projectone--primary;
 }
-
-.card.two {
+.two {
   background-color: $color-projecttwo--primary;
 }
-
-.card.three {
+.three {
   background-color: $color-projectthree--primary;
 }
-
-.card.four {
+.four {
   background-color: $color-white;
 }
-
-.card.five {
+.five {
   background-color: $color-projectfive--primary;
 }
-
-.card.six {
+.six {
   background-color: $color-projectsix--primary;
 }
+
 
 .card-text {
   display: flex;
@@ -85,11 +84,32 @@ background-color: $color-projectone--primary;
 .card-img {
   display: flex;
   align-items: center;
+  img {
+    position: absolute;
+    right: 32px;
+    width: 50%;
+    height: auto;
+  }
 }
 
-.card-img img {
-  position: absolute;
-  right: 32px;
-  width: 50%;
-  height: auto;
+
+
+.button-arrows {
+  position: fixed;
+  bottom:32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.button-arrows--updown {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-arrow img {
+  height:auto;
+  width: 28px;
+  margin:4px;
+
 }

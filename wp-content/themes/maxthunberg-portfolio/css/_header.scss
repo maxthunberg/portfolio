@@ -28,7 +28,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: rows
-
 }
 
 .header-displaymode--grid {
@@ -41,6 +40,15 @@
   width: 28px;
   margin:4px;
   opacity: .3;
+  transition: $transition_default;
+}
+
+.header-displaymode--grid img:hover, .header-displaymode--carousel img:hover {
+  height: auto;
+  width: 28px;
+  margin:4px;
+  opacity: 1;
+  transition: $transition_default;
 }
 
 .header-displaymode--carousel.selected img, .header-displaymode--grid.selected img {
