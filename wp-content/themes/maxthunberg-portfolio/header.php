@@ -12,9 +12,22 @@
 <body>
 
 <nav class="header">
+
     <div class="header-signature">
       <h2 class="header-signature--white">Max Thunberg</h2>
+    </div>
+
+  <div class="header-displaymode">
+    <div class="header-displaymode--carousel selected">
+      <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-carousel--white.svg" />
+    </div>
+
+    <div class="header-displaymode--grid">
+      <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-grid--white.svg" />
+    </div>
+
   </div>
+
 </nav>
 
   <main class="Section">

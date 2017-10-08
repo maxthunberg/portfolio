@@ -6,14 +6,90 @@
   height: 100vh;
   margin: 0;
   padding:0;
+  overflow: hidden;
 }
 
-.carousel-bg--dark  {
-background-color: $color-black;
+.carousel-bg.one {
+background-color: $color-projectone--primary;
+}
+
+.carousel-cards {
+  display: flex;
+  flex-direction: row;
 }
 
 .card {
-  width: $space*12;
-  height: $space*8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 768px;
+  height: 416px;
+  padding-left: 64px;
+  margin:32px;
+  box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
+  transition: $transition_default;
+}
+
+.card.active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 768px;
+  height: 416px;
+  padding-left: 64px;
+  box-shadow: -16px 16px 32px rgba(0,0,0,0.3);
+  transition: $transition_default;
+}
+
+.card.active:hover {
+  box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
+  transition: $transition_default;
+}
+
+.card.one {
   background-color: $color-projectone--primary;
+}
+
+.card.two {
+  background-color: $color-projecttwo--primary;
+}
+
+.card.three {
+  background-color: $color-projectthree--primary;
+}
+
+.card.four {
+  background-color: $color-white;
+}
+
+.card.five {
+  background-color: $color-projectfive--primary;
+}
+
+.card.six {
+  background-color: $color-projectsix--primary;
+}
+
+.card-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card-text--white h4, .card-text--white h2 {
+  color: $color-white;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+}
+
+.card-img img {
+  position: absolute;
+  right: 32px;
+  width: 50%;
+  height: auto;
 }
