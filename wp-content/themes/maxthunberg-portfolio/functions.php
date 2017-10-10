@@ -35,11 +35,16 @@ add_action('after_setup_theme', function() {
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');
     // wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.1.slim.min.js', '', '', true);
-    wp_register_script('tether', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', '', '', true);
+    // wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.1.slim.min.js', '', '', true);
+    // wp_register_script('tether', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', '', '', true);
     // wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', '', '', true);
+    wp_register_script('swiper', '/js/swiper.js', '', '', true);
+    wp_enqueue_style( 'swiper', get_template_directory_uri() . '/css/swiper.css',false,'1.1','all');
     wp_enqueue_script('jquery');
     wp_enqueue_script('tether');
+    wp_enqueue_script('swiper');
+
+
     // wp_enqueue_script('bootstrap');
 });
 

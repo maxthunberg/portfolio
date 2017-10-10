@@ -9,9 +9,36 @@ Template Name: Home
 <div class="carousel-bg one">
 
 <!-- MODULE CARD-->
+<div class="swiper-container carousel-cards">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="card-text--white">
+        <h4>SCHOOL</h4>
+        <h2>Icon set:<br />Yrgo</h2>
+      </div>
+
+      <div class="card-img">
+        <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/images/m-redesign-macbook--landingpage.png" />
+      </div>
+    </div>
+  </div>
+
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">Slide 4</div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+
+
 <div class="carousel-cards">
 
-  <div class="card six">
+  <!-- <div class="card six">
     <div class="card-text--white">
       <h4>SCHOOL</h4>
       <h2>Icon set:<br />Yrgo</h2>
@@ -45,7 +72,12 @@ Template Name: Home
       <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/images/m-redesign-macbook--landingpage.png" />
     </div>
 
-  </div>
+  </div> -->
+
+
+
+
+
 
   <!-- <div class="card three">
     <div class="card-text--white">
