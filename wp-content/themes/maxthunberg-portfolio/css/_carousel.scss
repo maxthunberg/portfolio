@@ -23,20 +23,20 @@ background-color: $color-projectone--primary;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 768px;
+  // width: 768px;
   height: 416px;
   padding-left: 64px;
-  margin:32px;
+  margin:64px 0;
   box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
   transition: $transition_default;
 }
 
-.active {
+.swiper-slide-active .card {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 768px;
+  // width: 768px;
   height: 416px;
   padding-left: 64px;
   box-shadow: -16px 16px 32px rgba(0,0,0,0.3);
@@ -92,6 +92,31 @@ background-color: $color-projectone--primary;
   }
 }
 
+/*SLIDER */
+#slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container--one {
+  margin-left:-832px;
+  transition: $transition_default;
+
+}
+
+// .swiper-container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100vw;
+//   height: 100vh;
+// }
+
+.swiper-slide {
+  width: 768px!important;
+  height: 80vh;
+}
 
 
 .button-arrows {
@@ -111,5 +136,4 @@ background-color: $color-projectone--primary;
   height:auto;
   width: 28px;
   margin:4px;
-
 }
