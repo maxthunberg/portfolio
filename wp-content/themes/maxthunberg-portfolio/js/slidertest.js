@@ -1,47 +1,4 @@
 
-// document.onkeydown = function(e) {
-//     switch (e.keyCode) {
-//         case 37:
-//             alert('left');
-//             break;
-//         case 38:
-//             alert('up');
-//             break;
-//         case 39:
-//           var getSliderContainer = document.getElementById('slider');
-//
-//           if (getSliderContainer.classList.contains('slider-container--one')) {
-//             document.getElementsByClassName(".slider-container--one").style.marginLeft = "50px";
-//             // document.getElementById("slider").classList.remove("slider-container--one");
-//             // document.getElementById("slider").classList.add("slider-container--two");
-//           }
-//             break;
-//         case 40:
-//             var el = document.getElementById("one");
-//
-//               if (el.classList.contains('active')) {
-//               document.getElementById("carousel-bg").classList.toggle("one");
-//               document.getElementById("carousel-bg").classList.toggle("two");
-//               }
-//             break;
-//     }
-//     e.preventDefault(); // prevent the default action (scroll / move caret)
-//
-// };
-//
-//
-// window.onload = function()
-// {
-//     if (window.jQuery)
-//     {
-//         alert('jQuery is loaded');
-//     }
-//     else
-//     {
-//         alert('jQuery is not loaded');
-//     }
-// }
-
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		//Navigation
@@ -116,4 +73,103 @@ $(document).ready(function() {
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
+
+
+// Change BG Color on carousel based on what card is active
+//
+$("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+    $('.carousel-bg').removeClass('one');
+    $('.carousel-bg').addClass('six');
+  }
+  else if(e.keyCode == 39) { // right
+    $('.carousel-bg').removeClass('one');
+    $('.carousel-bg').addClass('two');
+  }
+});
+
+
+// var changeBgColor = function(){
+//   if ($(".swiper-slide-active .one")[0]){
+//     $("body").keydown(function(e) {
+//       if(e.keyCode == 37) { // left
+//         $('.carousel-bg').removeClass('one');
+//         $('.carousel-bg').addClass('six');
+//       }
+//       else if(e.keyCode == 39) { // right
+//         $('.carousel-bg').removeClass('one');
+//         $('.carousel-bg').addClass('two');
+//       }
+//     });
+//
+//   } else if ($(".swiper-slide-active .two")[0]){
+//     $("body").keydown(function(e) {
+//       if(e.keyCode == 37) { // left
+//         $('.carousel-bg').removeClass('two');
+//         $('.carousel-bg').addClass('one');
+//       }
+//       else if(e.keyCode == 39) { // right
+//         $('.carousel-bg').removeClass('two');
+//         $('.carousel-bg').addClass('three');
+//       }
+//     });
+//
+//   } else if ($(".swiper-slide-active .three")[0]){
+//     $("body").keydown(function(e) {
+//       if(e.keyCode == 37) { // left
+//         $('.carousel-bg').removeClass('three');
+//         $('.carousel-bg').addClass('two');
+//       }
+//       else if(e.keyCode == 39) { // right
+//         $('.carousel-bg').removeClass('three');
+//         $('.carousel-bg').addClass('four');
+//       }
+//     });
+//
+//   } else if ($(".swiper-slide-active .four")[0]){
+//     $("body").keydown(function(e) {
+//       if(e.keyCode == 37) { // left
+//         $('.carousel-bg').removeClass('four');
+//         $('.carousel-bg').addClass('three');
+//       }
+//       else if(e.keyCode == 39) { // right
+//         $('.carousel-bg').removeClass('four');
+//         $('.carousel-bg').addClass('five');
+//       }
+//     });
+//
+//   } else if ($(".swiper-slide-active .five")[0]){
+//     $("body").keydown(function(e) {
+//       if(e.keyCode == 37) { // left
+//         $('.carousel-bg').removeClass('five');
+//         $('.carousel-bg').addClass('four');
+//       }
+//       else if(e.keyCode == 39) { // right
+//         $('.carousel-bg').removeClass('five');
+//         $('.carousel-bg').addClass('six');
+//       }
+//     });
+//
+//   } else if ($(".swiper-slide-active .six")[0]){
+//     $("body").keydown(function(e) {
+//       if(e.keyCode == 37) { // left
+//         $('.carousel-bg').removeClass('six');
+//         $('.carousel-bg').addClass('five');
+//       }
+//       else if(e.keyCode == 39) { // right
+//         $('.carousel-bg').removeClass('six');
+//         $('.carousel-bg').addClass('one');
+//       }
+//     });
+//
+// }
+
+// changeBgColor();
+
+
+
+
+
+
+
 });

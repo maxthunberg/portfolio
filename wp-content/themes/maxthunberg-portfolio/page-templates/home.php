@@ -29,7 +29,7 @@ Template Name: Home
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <div class="card one">
+                  <div class="card one" id="one-bg">
 
                     <div class="card-text--white">
                       <h4>ALFA LAVAL</h4>
@@ -76,8 +76,8 @@ Template Name: Home
                   <div class="card four">
 
                     <div class="card-text--white">
-                      <h4>AGROWTH</h4>
-                      <h2>Branding<br />Project</h2>
+                      <h4>PERSONAL</h4>
+                      <h2>Photo<br />Composition</h2>
                     </div>
                     <div class="card-img">
                       <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/images/m-redesign-macbook--landingpage.png" />
@@ -91,7 +91,7 @@ Template Name: Home
                   <div class="card five">
 
                     <div class="card-text--white">
-                      <h4>AGROWTH</h4>
+                      <h4>Int3 Software</h4>
                       <h2>Branding<br />Project</h2>
                     </div>
                     <div class="card-img">
@@ -106,8 +106,8 @@ Template Name: Home
                   <div class="card six">
 
                     <div class="card-text--white">
-                      <h4>AGROWTH</h4>
-                      <h2>Branding<br />Project</h2>
+                      <h4>SCHOOL</h4>
+                      <h2>Icon Set:<br />Yrgo</h2>
                     </div>
                     <div class="card-img">
                       <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/images/m-redesign-macbook--landingpage.png" />

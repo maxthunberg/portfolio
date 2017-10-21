@@ -10,7 +10,7 @@ var mySwiper = new Swiper ('.swiper-container', {
   centeredSlides: true,
   loop : true,
   keyboard: true,
-  initialSlide: 4,
+  initialSlide: 0,
   // slidesOffsetBefore: 4992,
   navigation: {
     nextEl: '.btn-next-slide',
