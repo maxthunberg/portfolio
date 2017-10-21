@@ -32,13 +32,24 @@ add_action('after_setup_theme', function() {
 });
 
  add_action('wp_enqueue_scripts', function () {
-  // wp_register_script('swiper','/js/swiper.js', '','', true);
-  // wp_enqueue_script('swiper');
+
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.1.slim.min.js', '', '', true);
+    wp_enqueue_script('jquery');
+
+
   wp_register_script('swiper', get_template_directory_uri() . '/js/swiper.min.js', '','', true);
   wp_enqueue_script('swiper');
+
+  wp_register_script('fullpage', get_template_directory_uri() . '/js/jquery.fullpage.js', '','', true);
+  wp_enqueue_script('fullpage');
+
   wp_enqueue_style( 'swiper', get_template_directory_uri() . '/css/swiper.min.css',false,'1.1','all');
+  wp_enqueue_style( 'fullpage', get_template_directory_uri() . '/css/jquery.fullpage.css',false,'1.1','all');
+
   wp_register_script('sliderTest', get_template_directory_uri() . '/js/sliderTest.js', '','', true);
   wp_enqueue_script('sliderTest');
+
 
 });
 

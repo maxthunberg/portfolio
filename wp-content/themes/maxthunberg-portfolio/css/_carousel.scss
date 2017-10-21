@@ -13,11 +13,6 @@
 background-color: $color-projectone--primary;
 }
 
-.carousel-cards {
-  display: flex;
-  flex-direction: row;
-}
-
 .card {
   position: relative;
   display: flex;
@@ -92,48 +87,13 @@ background-color: $color-projectone--primary;
   }
 }
 
-/*SLIDER */
-#slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .slider-container--one {
   margin-left:-832px;
   transition: $transition_default;
 
 }
 
-// .swiper-container {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100vw;
-//   height: 100vh;
-// }
-
 .swiper-slide {
   width: 768px!important;
   height: 80vh;
-}
-
-
-.button-arrows {
-  position: fixed;
-  bottom:32px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.button-arrows--updown {
-  display: flex;
-  flex-direction: column;
-}
-
-.button-arrow img {
-  height:auto;
-  width: 28px;
-  margin:4px;
 }

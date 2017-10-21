@@ -1,3 +1,17 @@
+.contact-page {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.contact-page.active {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+}
+
 .contact-bg {
   display: flex;
   align-items: center;
@@ -5,4 +19,11 @@
   width: 100vw;
   height: 100vh;
   background-color: $color-black;
+  z-index: 1000;
+}
+
+
+.all-pages {
+  position: relative;
+
 }

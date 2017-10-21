@@ -1,0 +1,37 @@
+
+.button-arrows {
+  position: fixed;
+  bottom:32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.button-arrows--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-arrows--updown {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-arrow img {
+  height:auto;
+  width: 28px;
+  margin:4px;
+}
+
+.button-arrow--up, .button-arrow--left, .button-arrow--down, .button-arrow--right {
+
+  .active {
+    background-color: red;
+  }
+}
+
+.button-arrow--left:hover, .button-arrow--right:hover, .button-arrow--up:hover, .button-arrow--down:hover {
+  opacity: .5;
+  transition: $transition_default;
+}
