@@ -14,7 +14,7 @@
 /* ----------------------------------------------------- */
 
   $space: 16px;
-  $general_font_size: 16px;
+  $general_font_size: 14px;
   $gutter: $space*4;
   $vertical_spacing: $space*8;
 
@@ -62,6 +62,12 @@
   $color-dark: #4F5C66;
   $color-black: #1D242A;
   $color-black--extra: #000000;
+
+  /*Box shadow*/
+
+  $boxshadow-sm: -8px 8px 16px rgba(0,0,0,0.3);
+  $boxshadow-sm--hover: -4px 4px 8px rgba(0,0,0,0.3);
+  $boxshadow-sm--active: -1px 1px 2px rgba(0,0,0,0.5);
 
 /* ----------------------------------------------------- */
 /* MEDIA QUERY */

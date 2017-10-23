@@ -76,6 +76,11 @@ background-color: $color-projectone--primary;
   color: $color-white;
 }
 
+.card-text--black h4, .card-text--black h2 {
+  color: $color-black;
+}
+
+
 .card-img {
   display: flex;
   align-items: center;

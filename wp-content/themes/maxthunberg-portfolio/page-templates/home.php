@@ -9,12 +9,50 @@ Template Name: Home
 <div id="fullpage">
 
 	<div class="section">
-    <div class="contact-page">
       <div class="contact-bg">
+        <div class="contact-info">
+          <h4>DIGITAL DESIGNER</h4>
+          <h2>Max Thunberg</h2>
+
+          <div class="contact-info--paragrafs">
+
+              <div class="contact-info--paragrafleft">
+                <p class="text-white">The man who did all this is me, Max Thunberg. A digital designer from Växjö
+                  in the south of Sweden currently living in Gothenburg. I am mostly focusing on
+                  web development, branding, photo manipulation and more awesome areas. If you
+                  are interested in getting in touch, which of course you are, simply send me
+                  and <strong>e-mail</strong> or give me a <strong>call</strong>.</p>
+              </div>
+
+              <div class="contact-info--paragrafright">
+                <p class="contact-paragraf--col1"><span class="bold">Advanced:</span> Adobe CC suite, Sketch, Flinto, HTML, CSS,
+                  Business Development, Google Sprints & teamwork.<br /><br />
+                <span class="bold">Basic:</span> PHP, JavaScript, Wordpress, Principle, Git, SASS, jQuery & Wordpress.
+                </p>
+              </div>
+
+          </div>
+
+          <div class="contact-social">
+            <div class="contact-social--behance">
+
+            </div>
+            <div class="contact-social--instagram">
+
+            </div>
+            <div class="contact-social--dribbble">
+
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="contact-image">
+
+        </div>
 
       </div>
-
-    </div>
 
   </div>
 
@@ -29,7 +67,7 @@ Template Name: Home
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <div class="card one" id="one-bg">
+                  <div class="card one" id="one">
 
                     <div class="card-text--white">
                       <h4>ALFA LAVAL</h4>
@@ -44,9 +82,9 @@ Template Name: Home
 
 
                 <div class="swiper-slide">
-                  <div class="card two">
+                  <div class="card two" id="two">
 
-                    <div class="card-text--white">
+                    <div class="card-text--black">
                       <h4>AGROWTH</h4>
                       <h2>Branding<br />Project</h2>
                     </div>
@@ -59,7 +97,7 @@ Template Name: Home
 
 
                 <div class="swiper-slide">
-                  <div class="card three">
+                  <div class="card three" id="three">
 
                     <div class="card-text--white">
                       <h4>CARIBOU</h4>
@@ -73,9 +111,9 @@ Template Name: Home
 
 
                 <div class="swiper-slide">
-                  <div class="card four">
+                  <div class="card four" id="four">
 
-                    <div class="card-text--white">
+                    <div class="card-text--black">
                       <h4>PERSONAL</h4>
                       <h2>Photo<br />Composition</h2>
                     </div>
@@ -88,7 +126,7 @@ Template Name: Home
 
 
                 <div class="swiper-slide">
-                  <div class="card five">
+                  <div class="card five" id="five">
 
                     <div class="card-text--white">
                       <h4>Int3 Software</h4>
@@ -103,7 +141,7 @@ Template Name: Home
 
 
                 <div class="swiper-slide">
-                  <div class="card six">
+                  <div class="card six" id="six">
 
                     <div class="card-text--white">
                       <h4>SCHOOL</h4>

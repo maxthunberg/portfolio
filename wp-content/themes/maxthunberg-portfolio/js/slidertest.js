@@ -76,15 +76,79 @@ $(document).ready(function() {
 
 
 // Change BG Color on carousel based on what card is active
-//
+
+
+var a = [3,4,5,6,7,8,9];
+
+var b = "MAX";
+
+
+var changeBgColorPrev = function() {
+
+    if ( $('.one').parent().hasClass('swiper-slide-active')) {
+      $('.carousel-bg').removeClass('one')
+      $('.carousel-bg').addClass('six');
+
+    } else if ( $('.two').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('two')
+        $('.carousel-bg').addClass('one');
+
+    } else if ( $('.three').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('three')
+        $('.carousel-bg').addClass('two');
+
+    } else if ( $('.four').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('four')
+        $('.carousel-bg').addClass('three');
+
+    } else if ( $('.five').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('five')
+        $('.carousel-bg').addClass('four');
+
+    } else if ( $('.six').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('six')
+        $('.carousel-bg').addClass('five');
+    }
+
+}
+
+var changeBgColorNext = function() {
+
+    if ( $('.one').parent().hasClass('swiper-slide-active')) {
+      $('.carousel-bg').removeClass('one')
+      $('.carousel-bg').addClass('two');
+
+    } else if ( $('.two').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('two')
+        $('.carousel-bg').addClass('three');
+
+    } else if ( $('.three').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('three')
+        $('.carousel-bg').addClass('four');
+
+    } else if ( $('.four').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('four')
+        $('.carousel-bg').addClass('five');
+
+    } else if ( $('.five').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('five')
+        $('.carousel-bg').addClass('six');
+
+    } else if ( $('.six').parent().hasClass('swiper-slide-active')) {
+        $('.carousel-bg').removeClass('six')
+        $('.carousel-bg').addClass('one');
+    }
+
+}
+
+
 $("body").keydown(function(e) {
   if(e.keyCode == 37) { // left
-    $('.carousel-bg').removeClass('one');
-    $('.carousel-bg').addClass('six');
+    changeBgColorPrev();
+    changeUiColor();
   }
   else if(e.keyCode == 39) { // right
-    $('.carousel-bg').removeClass('one');
-    $('.carousel-bg').addClass('two');
+    changeBgColorNext(b);
   }
 });
 

@@ -19,11 +19,11 @@
 
   <div class="header-displaymode">
     <div class="header-displaymode--carousel selected">
-      <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-carousel--white.svg" />
+      <img class="icn-carousel icn-carousel--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-carousel--white.svg" />
     </div>
 
     <div class="header-displaymode--grid">
-      <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-grid--white.svg" />
+      <img class="icn-grid icn-grid--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-grid--white.svg" />
     </div>
 
   </div>
