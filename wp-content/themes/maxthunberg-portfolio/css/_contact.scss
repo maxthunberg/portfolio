@@ -27,7 +27,7 @@
 
   h2 {
     color: $color-white;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   .contact-info--paragrafleft, .contact-info--paragrafright {
@@ -46,7 +46,10 @@
 .contact-image {
   width: 50%;
   height: 100%;
-  background-image: url('icons/behance_default.png');
+  background-image: url('images/max-profile-pinkshirt-greyscale.jpg');
+  background-size: cover;
+  background-position: center center;
+  opacity: .5;
 
 }
 
@@ -55,35 +58,31 @@
   margin-top: 32px;
 
   .contact-social--behance, .contact-social--instagram, .contact-social--dribbble {
-    height: 64px;
-    width: 64px;
+    height: 32px;
+    width: 32px;
     background-color: $color-dark;
-    margin-right: 32px;
+    margin-right: 16px;
   }
 
   .contact-social--behance, .contact-social--dribbble, .contact-social--instagram {
     background-size: cover;
-    box-shadow: $boxshadow-sm;
+    box-shadow: $boxshadow-level--two;
     transition: $transition_default;
 
     &:hover{
-      box-shadow: $boxshadow-sm--hover;
+      box-shadow: $boxshadow-level--four;
       transition: $transition_default;
     }
     &:active{
-      box-shadow: $boxshadow-sm--active;
+      box-shadow: $boxshadow-level--two;
       transition: $transition_default;
     }
 
   }
   .contact-social--behance{
     background-image: url('icons/behance_default.png');
-    // filter: gray; /* IE6-9 */
-    // -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
       &:hover{
       background-image: url('icons/behance_hover.png');
-      // filter: none;
-      // -webkit-filter: grayscale(0%);
       }
   }
 

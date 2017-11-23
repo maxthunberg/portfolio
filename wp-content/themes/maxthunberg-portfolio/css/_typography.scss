@@ -1,49 +1,115 @@
 h1 {
-  font-size: 64px;
+  font-size: $space*4;
   line-height: $font-size-line-height;
   font-family: Space-B;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: $space*3;
   line-height: $font-size-line-height;
   font-family: Space-B;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: $space*1.5;
+  font-family: Space-B;
+  line-height: $font-size-line-height;
+}
+
+.h3--sm {
+  font-size: $space;
   font-family: Space-B;
   line-height: $font-size-line-height;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: $space*1.5;
   font-family: Oranienbaum;
-  letter-spacing: 8px;
+  letter-spacing: $space*1.125;
+  text-transform: uppercase;
+  line-height: $font-size-line-height;
+}
+
+.h4--lg {
+  font-size: $space*2;
+  font-family: Oranienbaum;
+  letter-spacing: $space*1;
   text-transform: uppercase;
   line-height: $font-size-line-height;
 }
 
 h5 {
-  font-size: 16px;
-  letter-spacing: 5px;
+  font-size: $space;
+  letter-spacing: $space*0.75;
+  font-family: Oranienbaum;
+  text-transform: capitalize;
+  line-height: $font-size-line-height;
+}
+
+h6 {
+  font-size: $space*0.75;
+  letter-spacing: $space*0.5625;
   font-family: Oranienbaum;
   text-transform: capitalize;
   line-height: $font-size-line-height;
 }
 
 p {
-  font-size: 1em;
+  font-size: $space*0.875;
   font-family: Space-R;
   line-height: $font-size-line-height;
 }
 
 a {
-  font-size: 0.8em;
+  font-size: $space*0.875;
   line-height: $font-size-line-height;
   font-family: Space-B;
 
 }
+
+/*COLORS FOR TEXT*/
+
+.color-black {
+  color: $color-black;
+}
+
+.color-dark {
+  color: §color-dark;
+}
+
+.color-light {
+  color: $color-light;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.color-one {
+  color: $color-projectone--primary;
+}
+
+.color-two {
+  color: $color-projecttwo--primary;
+}
+
+.color-three {
+  color: $color-projectthree--primary;
+}
+
+.color-four {
+  color: $color-projectfour--primary;
+}
+
+.color-five {
+  color: $color-projectfive--primary;
+}
+
+.color-six {
+  color: $color-projectsix--primary;
+}
+
+
 
 .wordbreak {
   word-spacing: 25vw;

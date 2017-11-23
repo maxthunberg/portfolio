@@ -7,6 +7,8 @@
   margin: 0;
   padding:0;
   overflow: hidden;
+  z-index: 100;
+  position: relative;
 }
 
 .carousel-bg.one {
@@ -22,26 +24,28 @@ background-color: $color-projectone--primary;
   height: 416px;
   padding-left: 64px;
   margin:64px 0;
-  box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
-  transition: $transition_default;
-}
-
-.swiper-slide-active .card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  // width: 768px;
-  height: 416px;
-  padding-left: 64px;
-  box-shadow: -16px 16px 32px rgba(0,0,0,0.3);
+  box-shadow: $boxshadow-level--one;
+  border-radius: 4px;
   transition: $transition_default;
   &:hover {
-    box-shadow: -4px 4px 8px rgba(0,0,0,0.5);
+    box-shadow: $boxshadow-level--four;
     transition: $transition_default;
   }
   &:active {
-    box-shadow: -2px 2px 4px rgba(0,0,0,0.7);
+    box-shadow: $boxshadow-level--two;
+    transition: $transition_default;
+  }
+}
+
+.swiper-slide-active .card {
+  box-shadow: $boxshadow-level--two;
+  transition: $transition_default;
+  &:hover {
+    box-shadow: $boxshadow-level--four;
+    transition: $transition_default;
+  }
+  &:active {
+    box-shadow: $boxshadow-level--two;
     transition: $transition_default;
   }
 }

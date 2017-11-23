@@ -20,8 +20,8 @@ Template Name: Home
                 <p class="text-white">The man who did all this is me, Max Thunberg. A digital designer from Växjö
                   in the south of Sweden currently living in Gothenburg. I am mostly focusing on
                   web development, branding, photo manipulation and more awesome areas. If you
-                  are interested in getting in touch, which of course you are, simply send me
-                  and <strong>e-mail</strong> or give me a <strong>call</strong>.</p>
+                  are interested in getting in touch, which of course you are, simply send me an
+                  <a href="mailto:max@maxthunberg.com" target="_top">e-mail</a> or give me a <a href="tel:+4670-4081643">call</a>.</p>
               </div>
 
               <div class="contact-info--paragrafright">
@@ -34,16 +34,9 @@ Template Name: Home
           </div>
 
           <div class="contact-social">
-            <div class="contact-social--behance">
-
-            </div>
-            <div class="contact-social--instagram">
-
-            </div>
-            <div class="contact-social--dribbble">
-
-            </div>
-
+            <a href="https://www.behance.net/maxthunber56c8/" target="_blank"><div class="contact-social--behance"></div></a>
+            <a href="https://www.instagram.com/maxthunberg/" target="_blank"><div class="contact-social--instagram"></div></a>
+            <a href="https://dribbble.com/maxthunberg" target="_blank"><div class="contact-social--dribbble"></div></a>
 
           </div>
 
@@ -144,8 +137,8 @@ Template Name: Home
                   <div class="card six" id="six">
 
                     <div class="card-text--white">
-                      <h4>SCHOOL</h4>
-                      <h2>Icon Set:<br />Yrgo</h2>
+                      <h4>FREEBIE</h4>
+                      <h2>Icon Set:<br />Roundi</h2>
                     </div>
                     <div class="card-img">
                       <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/images/m-redesign-macbook--landingpage.png" />
@@ -158,59 +151,10 @@ Template Name: Home
 
         </div>
 
-
-
-
     </div>
 
   </div> <!--Section Two-->
 
-
-  <!--section Three-->
-
-	<div class="section">
-
-  </div><!--Section Three-->
-
-
 </div> <!--fullpage end-->
-
-
-
-
-        <!-- arrow buttons-->
-
-        <div class="button-arrows--container">
-
-
-        <div class="button-arrows">
-
-            <div class="button-arrow button-arrow--left btn-prev-slide">
-              <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-arrow--left.svg" />
-            </div>
-
-            <div class="button-arrows--updown">
-
-                <div class="button-arrow button-arrow--up active">
-                  <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-arrow--up.svg" />
-                </div>
-
-                <div class="button-arrow button-arrow--down">
-                  <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-arrow--down.svg" />
-                </div>
-
-            </div>
-
-            <div class="button-arrow button-arrow--right btn-next-slide">
-              <img class="arrow-right--image" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-arrow--right.svg" />
-            </div>
-
-        </div>
-
-      </div>
-
-
-
-
 
 <?php get_footer(); ?>

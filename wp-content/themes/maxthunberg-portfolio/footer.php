@@ -1,4 +1,32 @@
 
+<div class="arrowbtns">
+
+  <div class="arrowbtns-container">
+
+          <div class="arrowbtns-btn arrowbtns-btn--left ui ui--white btn-prev-slide">
+            <div class="arrowbtns-arrow--left"></div>
+          </div>
+
+      <div class="arrowbtns-container--updown">
+
+          <div class="arrowbtns-btn arrowbtns-btn--top ui ui--white">
+            <div class="arrowbtns-arrow--up"></div>
+          </div>
+
+          <div class="arrowbtns-btn arrowbtns-btn--bottom ui ui--white">
+            <div class="arrowbtns-arrow--down"></div>
+          </div>
+
+      </div>
+
+          <div class="arrowbtns-btn arrowbtns-btn--right ui ui--white btn-next-slide">
+            <div class="arrowbtns-arrow--right"></div>
+          </div>
+
+  </div>
+
+</div>
+
 <?php wp_footer(); ?>
 
 <!-- Initialize Swiper -->

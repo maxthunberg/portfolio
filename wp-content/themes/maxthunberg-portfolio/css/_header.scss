@@ -9,17 +9,40 @@
   z-index: 1000;
 }
 
-.header-signature {
+
+.header-signature--white {
   position: fixed;
   top:32px;
   left: 32px;
-
-}
-
-.header-signature--white {
   font-size: $space;
   color:#FFF;
+  text-decoration: none;
+  opacity: 1;
+  transition: $transition_default;
+  &:hover {
+    opacity: 1;
+    transition: $transition_default;
+    &:before{
+      content: "";
+      top:100%;
+      left:0px;
+      border: solid .5px #fff;
+      width: 100%;
+      position: absolute;
+      transition: $transition_default;
+    }
+  }
+  &:before{
+    content: "";
+    top:100%;
+    left:-8px;
+    border: solid 0px #fff;
+    width: 0%;
+    position: absolute;
+    transition: $transition_default;
+  }
 }
+
 
 
 /*DISPLAYMODE ICONS*/

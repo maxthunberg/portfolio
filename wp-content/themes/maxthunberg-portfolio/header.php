@@ -13,17 +13,53 @@
 
 <nav class="header">
 
-    <div class="header-signature">
-      <h2 class="header-signature--white">Max Thunberg</h2>
-    </div>
+      <a href="/#Home" class="header-signature--white">Max Thunberg</a>
+
 
   <div class="header-displaymode">
     <div class="header-displaymode--carousel selected">
-      <img class="icn-carousel icn-carousel--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-carousel--white.svg" />
+        <div class="icn-carousel--frame">
+          <div class="icn-carousel--card0 default">
+
+          </div>
+
+          <div class="icn-carousel--card1 default">
+
+          </div>
+          <div class="icn-carousel--card2 default">
+
+          </div>
+          <div class="icn-carousel--card3 default">
+
+          </div>
+        </div>
+      <!-- <img class="icn-carousel ui ui--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-carousel--black.svg" /> -->
     </div>
 
-    <div class="header-displaymode--grid">
-      <img class="icn-grid icn-grid--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-grid--white.svg" />
+    <div class="header-displaymode--grid not-selected">
+      <div class="icn-grid--frame">
+        <div class="icn-grid--card icn-grid--card1">
+
+        </div>
+        <div class="icn-grid--card icn-grid--card2">
+
+        </div>
+        <div class="icn-grid--card icn-grid--card3">
+
+        </div>
+
+        <div class="icn-grid--card icn-grid--card4">
+
+        </div>
+        <div class="icn-grid--card icn-grid--card5">
+
+        </div>
+        <div class="icn-grid--card icn-grid--card6">
+
+        </div>
+
+      </div>
+      <!-- <img class="icn-grid ui ui--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-grid--black.svg" /> -->
     </div>
 
   </div>
