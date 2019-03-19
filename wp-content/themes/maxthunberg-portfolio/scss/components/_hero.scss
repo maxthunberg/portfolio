@@ -1,0 +1,159 @@
+.hero {
+  position: relative;
+  @include addFlex(0,center,space-between,0);
+  height: 100vh;
+  width: 100%;
+  background-color: $color-dark;
+  @include linear-gradient(45deg, $color-black, $color-dark);
+  overflow: hidden;
+  .hero--text-container {
+    @include addFlex(column,0,center,0);
+    width: 50%;
+    height: 100%;
+    padding: 4rem 2rem 4rem 6rem;
+    z-index: 2;
+    .hero__subheading {
+      color: $color-white;
+      opacity: .7;
+      margin-bottom: .5rem;
+    }
+    .hero__heading {
+      max-width: none;
+      color: $color-white;
+    }
+  }
+  .hero--image-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    img {
+      height: 320px;
+      width: auto;
+    }
+  }
+}
+
+
+.hero.agrowth--gradient .hero--image-container img {
+  height: 320px;
+}
+
+.hero.sendify--gradient .hero--image-container img {
+  height: 100vh;
+  margin-left: -256px;
+}
+
+.hero.thunberg-sans--gradient .hero--image-container img {
+  height: 256px;
+}
+
+.hero.express-delivery--gradient .hero--image-container img {
+  height: 100vh;
+}
+
+.hero.humblebee--gradient .hero--image-container img {
+  height: 340px;
+}
+
+.hero.int3-software--gradient .hero--image-container img {
+  height: 100vh;
+  margin-left: -480px;
+}
+
+
+
+@media screen and (max-width: $mq-sm) {
+
+
+
+    .hero {
+      @include addFlex(column,0,0,0);
+      .hero--text-container  {
+        @include addFlex(column,flex-start,flex-end,0);
+        width: 100%;
+        height: 50%;
+        padding: 1.5rem 1.5rem 3rem 2rem;
+        z-index: 2;
+        .hero__subheading {
+          letter-spacing: 4px;
+          font-size: 1rem;
+        }
+        .hero__heading {
+          font-size: 2rem;
+          max-width: 70%;
+          max-width: 70%;
+        }
+
+      }
+      .hero--image-container {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        height: 50%;
+        z-index: 1;
+        img {
+          max-height: 100%;
+          width: auto;
+        }
+      }
+    }
+
+    .hero.agrowth--gradient .hero--image-container img {
+      height: 320px;
+    }
+
+    .hero.sendify--gradient .hero--image-container img {
+      height: 100vh;
+      margin-left: -112px;
+    }
+
+    .hero.thunberg-sans--gradient .hero--image-container img {
+      height: 256px;
+    }
+
+    .hero.express-delivery--gradient .hero--image-container img {
+      height: 100vh;
+    }
+
+    .hero.humblebee--gradient .hero--image-container img {
+      height: 340px;
+    }
+
+    .hero.int3-software--gradient .hero--image-container img {
+      height: 100vh;
+      margin-left: 160px;
+    }
+
+
+
+}
+
+@media screen and (max-width: $mq-xs) {
+  .hero.agrowth--gradient .hero--image-container img {
+    height: 320px;
+  }
+
+  .hero.sendify--gradient .hero--image-container img {
+    height: 100vh;
+    margin-left: -112px;
+  }
+
+  .hero.thunberg-sans--gradient .hero--image-container img {
+    height: 256px;
+  }
+
+  .hero.express-delivery--gradient .hero--image-container img {
+    height: 100vh;
+  }
+
+  .hero.humblebee--gradient .hero--image-container img {
+    height: 340px;
+  }
+
+  .hero.int3-software--gradient .hero--image-container img {
+    height: 100vh;
+    margin-left: -40px;
+  }
+}

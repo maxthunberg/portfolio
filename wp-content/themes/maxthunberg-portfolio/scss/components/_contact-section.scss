@@ -1,0 +1,131 @@
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-white-05;
+  z-index: 1000;
+
+  .grid-container {
+    @include addFlex(0, center, center, nowrap);
+    .contact--content {
+      @include addFlex(column, 0, 0, 0);
+      width: 100%;
+      max-width: 704px;
+      height: 100%;
+      padding: 2rem;
+
+      .contact--social {
+        @include addFlex(0,0,0,0);
+        margin-top: .5rem;
+        .contact--social__icon {
+          position: relative;
+          @include addFlex(0,center,center,0)
+          height: 3rem;
+          width: 3rem;
+          margin-right: 1rem;
+          border: 1px solid $color-dark;
+          border-radius: .25rem;
+          transition: $transition--enter__fast;
+          svg {
+            height: 1.5rem;
+            .svg-color {
+              fill: $color-dark;
+              transition: $transition--enter__fast;
+            }
+          }
+        }
+        .contact--social__icon:hover {
+          transition: $transition--exit__fast;
+        }
+
+        .contact--social__dribbble:hover {
+          border: 1px solid $color-dribbble;
+          svg {
+            .svg-color {
+              fill: $color-dribbble;
+              transition: $transition--exit__fast;
+            }
+          }
+        }
+        .contact--social__linkedin:hover {
+          border: 1px solid $color-linkedin;
+          svg {
+            .svg-color {
+              fill: $color-linkedin;
+              transition: $transition--exit__fast;
+            }
+          }
+        }
+        .contact--social__instagram:hover {
+          // background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+          border: 1px solid $color-instagram;
+          svg {
+            .svg-color {
+              fill: $color-instagram;
+              transition: $transition--exit__fast;
+            }
+          }
+        }
+      }
+
+    }
+
+
+    .contact--image {
+      width: 30%;
+      min-width: 256px;
+      height: 100%;
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        opacity: 1;
+        border-radius: .5rem;
+        box-shadow: $box-shadow-three;
+      }
+    }
+
+  }
+
+}
+
+
+.contact--info__text:nth-child(1) {
+  padding-right: 1rem;
+}
+.contact--info__text:nth-child(2) {
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: $mq-sm) {
+
+
+  .contact-section {
+
+    .grid-container {
+
+      .contact--content {
+        width: 100%;
+
+        .contact--social {
+          margin-top: 0;
+        }
+
+      }
+    }
+
+    .contact--image {
+        display: none;
+    }
+
+  }
+
+
+
+
+
+}

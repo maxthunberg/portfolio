@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#F2F2F2" points="0 0 0 16 3 19 14 19 14 0"/>
+    <path fill="#58ED9F" d="M10.5,7 L10.5,8.5 L9,8.5 C9,9.329 9.672,10 10.5,10 C11.328,10 12,9.329 12,8.5 C12,7.671 11.328,7 10.5,7"/>
+    <polygon fill="#CCCCCC" points="2 3 12 3 12 2 2 2"/>
+    <polygon fill="#CCCCCC" points="2 5 12 5 12 4 2 4"/>
+    <polygon fill="#CCCCCC" points="2 8 8 8 8 7 2 7"/>
+    <polygon fill="#CCCCCC" points="2 10 8 10 8 9 2 9"/>
+    <polygon fill="#FF6665" points="2 16 3 16 3 15 2 15"/>
+    <polygon fill="#FF6665" points="4 17 5 17 5 14 4 14"/>
+    <polygon fill="#FF6665" points="6 17 7 17 7 13 6 13"/>
+    <polygon fill="#FF6665" points="8 17 9 17 9 12 8 12"/>
+    <path fill="#292929" d="M19,22.5 C19,22.224 19.224,22 19.5,22 L15.5,22 C15.776,22 16,22.224 16,22.5 C16,22.776 15.776,23 15.5,23 L19.5,23 C19.224,23 19,22.776 19,22.5"/>
+    <polygon fill="#CCCCCC" points="0 16 3 16 3 19"/>
+    <polygon fill="#CCCCCC" points="11 13 5 19 11 19"/>
+    <polygon fill="#CE312C" points="8 16 8 17 9 17 9 15"/>
+    <polygon fill="#757575" points="14 24 20.999 24 20.999 23 14 23"/>
+    <polygon fill="#757575" points="11 22 24 22 24 13 11 13"/>
+    <polygon fill="#FFFFFF" points="12 21 23 21 23 14 12 14"/>
+    <polygon fill="#F2F2F2" points="23 14 16 21 23 21"/>
+  </g>
+</svg>

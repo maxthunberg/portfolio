@@ -1,0 +1,37 @@
+	<?php if( have_rows('project_card') ):
+
+	while( have_rows('project_card') ): the_row();
+
+		// vars
+		$image = get_sub_field('image');
+		$alttext = get_sub_field('alttext');
+		$title = get_sub_field('name');
+		$client = get_sub_field('client');
+		$projectname = strtolower(get_the_title());
+
+		?>
+		<div class="hero <?= str_replace(' ', '-', strtolower($client)); ?>--gradient ui-section light-section">
+
+			<div class="hero--text-container">
+				<h5 class="sub-heading-three light"><?= $client ?></h5>
+				<h2 class="heading-two light no-margin"><?= $title ?></h2>
+			</div>
+
+			<div class="hero--image-container">
+				<?php	if( !empty($image) ):
+
+									echo add_image(
+										$image,  // ACF-field
+										'g_south,q_90,c_fill', // Parameters
+										'hero--image__img', // Classes
+										$alttext // alt text
+									);
+
+								endif; ?>
+			</div>
+
+		</div>
+
+	<?php endwhile; ?>
+
+<?php endif; ?>

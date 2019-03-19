@@ -1,0 +1,69 @@
+.grid-mode {
+  @include addFlex(0,center, center,0);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white-05;
+  padding: 6rem 3rem;
+  top: 0;
+  left:0;
+  z-index: 8000;
+
+  .grid-mode--container {
+    @include addFlex(0,flex-start, flex-start, wrap);
+    width: 100%;
+    height: 100%;
+
+    .card-container {
+      @include addFlex(0,center,center,0)
+      width: calc(100%/3);
+      height: 50%;
+      padding: 1.5rem;
+      .card-link {
+        height: 100%;
+      }
+
+    }
+
+  }
+
+}
+
+
+.grid-mode.hide {
+  display: none;
+}
+
+.swiper-container-horizontal.hide {
+ display: none;
+}
+
+
+@media screen and (max-width: $mq-sm) {
+
+  .grid-mode {
+    @include addFlex(0,center, center,0);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 1rem;
+    top: 0;
+    left:0;
+    z-index: 8000;
+
+    .grid-mode--container {
+      height: 100%;
+      @include addFlex(column,flex-start, flex-start, wrap);
+
+      .card-container {
+        @include addFlex(0,center,center,0)
+        flex:1;
+        width: 100%;
+        padding: .5rem;
+      }
+
+    }
+
+  }
+
+}

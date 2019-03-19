@@ -1,0 +1,33 @@
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide.vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
+  width: 60%;
+  padding: $space*2;
+  transition: $transition--exit__fast;
+
+}
+.swiper-slide-active {
+  z-index: 1000;
+}
+
+.active {
+  height: 100vh!important;
+  width: 100vw!important;
+  border-radius: 0px!important;
+}

@@ -1,0 +1,72 @@
+.footer.hide {
+  bottom: -6rem;
+  transition: $transition--enter__normal;
+}
+
+.footer.remove {
+  display: none;
+  transition: $transition--enter__normal;
+}
+
+// .footer {
+//   @include addFlex(0,center,center,0);
+//   position: fixed;
+//   bottom: 2rem;
+//   width: 100%;
+//   z-index: 9000;
+//   transition: $transition--enter__normal;
+
+  .footer {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -3rem;
+    @include addFlex(0,flex-end,center,0);
+    width: 6rem;
+    height: 64px;
+    z-index: 1000;
+    transition: $transition--enter__normal;
+    .btn-arrow {
+      opacity: .3;
+      cursor: default;
+      box-shadow: none;
+      transition: $transition--enter__normal;
+    }
+
+    .btn-arrow.selected {
+      opacity: 1;
+      cursor: default;
+      box-shadow: $box-shadow-one;
+      transition: $transition--enter__normal;
+    }
+
+    .btn-arrow.selected:hover {
+      cursor: pointer;
+      box-shadow: $box-shadow-three;
+      transition: $transition--enter__normal;
+    }
+
+    .container--updown {
+      @include addFlex(column,center,flex-end,0);
+      height: 48px;
+      width: rem(44px);
+
+        .btn-arrow__bottom {
+          margin: .5rem .5rem 0 .5rem;
+        }
+
+    }
+
+  }
+
+// }
+
+
+
+@media screen and (max-width: $mq-sm) {
+
+.footer {
+  display: none;
+}
+
+}

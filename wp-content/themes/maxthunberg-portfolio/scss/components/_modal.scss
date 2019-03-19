@@ -1,0 +1,135 @@
+.modal {
+  @include addFlex(0,center,center,0);
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba($color-white-05,0);
+  z-index: 10000;
+  transition: $transition--enter__fast;
+
+  .modal--container {
+    position: relative;
+    background-color: $color-white-05;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 960px;
+    min-width: 320px;
+    padding: 3rem;
+    margin: 2rem 2rem 0;
+    opacity: 0;
+    z-index: 2;
+    box-shadow: $box-shadow-one;
+    transition: $transition--enter__fast;
+
+    .modal--content {
+        width: 100%;
+      .shortcut--container {
+        @include addFlex(0,0,0,wrap);
+        width: 100%;
+        margin: 2rem 0 0 0;
+        .shortcut {
+          @include addFlex(0,flex-start,0,0)
+          padding-right: 2rem;
+          width: 50%;
+          svg {
+            margin-right: 1rem;
+            width: 2rem;
+          }
+        }
+      }
+    }
+
+    .modal--content {
+        width: 100%;
+      .menu--container {
+        @include addFlex(0,0,0,wrap);
+        width: 100%;
+        margin: 2rem 0 0 0;
+        .menu--link {
+          @include addFlex(0,0,0,0);
+          width: 50%;
+          padding: 1rem 1rem 1rem 0;
+          .link {
+            font-family: $font-family-subheading;
+            font-size: 1.5rem;
+            line-height: 1.25;
+            font-weight: 400;
+            text-decoration: none;
+          }
+
+        }
+      }
+    }
+
+    .modal__close {
+      @include addFlex(column, center, center, 0)
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      height: 3rem;
+      width: 3rem;
+      border-radius: .25rem;
+      border: 1px solid $color-dark;
+      transition: $transition--enter__fast;
+      svg {
+        height: 1.5rem;
+        width: auto;
+        .svg-color {
+          fill: $color-dark;
+        }
+      }
+      &:hover {
+        border: 1px solid $color-error;
+        cursor: pointer;
+        transition: $transition--exit__fast;
+        svg {
+          .svg-color {
+            fill: $color-error;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.modal.is-active {
+  display: flex;
+}
+
+.modal.is-visible {
+  background-color: rgba($color-white-05,.9);
+  transition: $transition--exit__fast;
+  .modal--container {
+    opacity: 1;
+    margin: 0 2rem 0;
+    box-shadow: $box-shadow-four;
+    transition: $transition--exit__fast;
+  }
+}
+
+.overlay-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color-white-05, .5);
+  filter:: blur(20px);
+  z-index: 1;
+}
+
+@media screen and (max-width: $mq-sm) {
+
+  .modal, .modal.is-visible {
+    .modal--container {
+      border-radius: 0rem;
+      margin: 2rem 0 0;
+    }
+
+  }
+
+}

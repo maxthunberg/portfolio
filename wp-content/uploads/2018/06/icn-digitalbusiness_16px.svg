@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#CCCCCC" points="0 12.001 11 12.001 11 0 0 0"/>
+    <polygon fill="#F2F2F2" points="1 11 10 11 10 1 1 1"/>
+    <polygon fill="#FF6665" points="2 10 3 10 3 9 2 9"/>
+    <polygon fill="#FF6665" points="3 10 4 10 4 8 3 8"/>
+    <polygon fill="#FF6665" points="4 10 5 10 5 7 4 7"/>
+    <path fill="#58ED9F" d="M9,4.5 C9,4.776 8.776,5 8.5,5 C8.224,5 8,4.776 8,4.5 C8,4.224 8.224,4 8.5,4 C8.776,4 9,4.224 9,4.5"/>
+    <polygon fill="#CCCCCC" points="2 3 9 3 9 1.999 2 1.999"/>
+    <polygon fill="#CCCCCC" points="2 5 7 5 7 4 2 4"/>
+    <polygon fill="#757575" points="6 14 16 14 16 7 6 7"/>
+    <polygon fill="#FFFFFF" points="7 13 15 13 15 8 7 8"/>
+    <polygon fill="#757575" points="9 16 13 16 13 15 9 15"/>
+    <polygon fill="#292929" points="10 15 12 15 12 14 10 14"/>
+  </g>
+</svg>

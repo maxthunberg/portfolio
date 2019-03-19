@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="btn-arrow btn-arrow__top" viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg">
+<path transform="translate(-166 -348)" d="m168 348h24c1.1046 0 2 0.89543 2 2v16c0 1.1046-0.89543 2-2 2h-24c-1.1046 0-2-0.89543-2-2v-16c0-1.1046 0.89543-2 2-2zm12 6l-5 7h10l-5-7z" fill="#263241" fill-rule="evenodd"/>
+</svg>

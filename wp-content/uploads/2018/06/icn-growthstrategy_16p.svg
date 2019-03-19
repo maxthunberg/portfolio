@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#FF6665" points="12 4 16 4 16 0 12 0"/>
+    <polygon fill="#292929" points="8 4 12 4 12 0 8 0"/>
+    <polygon fill="#F2F2F2" points="4 4 8 4 8 0 4 0"/>
+    <polygon fill="#FF6665" points="0 8 4 8 4 4 0 4"/>
+    <polygon fill="#292929" points="0 4 4 4 4 0 0 0"/>
+    <polygon fill="#292929" points="12 8 16 8 16 4 12 4"/>
+    <polygon fill="#FF6665" points="8 8 12 8 12 4 8 4"/>
+    <polygon fill="#292929" points="4 8 8 8 8 4 4 4"/>
+    <polygon fill="#F2F2F2" points="12 12 16 12 16 8 12 8"/>
+    <polygon fill="#292929" points="8 12 12 12 12 8 8 8"/>
+    <polygon fill="#FF6665" points="4 12 8 12 8 8 4 8"/>
+    <polygon fill="#292929" points="0 12 4 12 4 8 0 8"/>
+    <polygon fill="#F2F2F2" points="0 16 4 16 4 12 0 12"/>
+    <polygon fill="#292929" points="12 16 16 16 16 12 12 12"/>
+    <polygon fill="#F2F2F2" points="8 16 12 16 12 12 8 12"/>
+    <polygon fill="#292929" points="4 16 8 16 8 12 4 12"/>
+  </g>
+</svg>

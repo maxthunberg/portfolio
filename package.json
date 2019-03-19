@@ -1,0 +1,28 @@
+{
+  "name": "maxthunberg_portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxthunberg/portfolio.git"
+  },
+  "author": "Max Thunberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxthunberg/portfolio/issues"
+  },
+  "homepage": "https://github.com/maxthunberg/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "readable-stream": "^3.2.0"
+  }
+}

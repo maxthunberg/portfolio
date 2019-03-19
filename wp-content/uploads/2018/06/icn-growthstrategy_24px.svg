@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#F2F2F2" points="0 8 4 8 4 4 0 4"/>
+    <polygon fill="#F2F2F2" points="16 8 20 8 20 4 16 4"/>
+    <polygon fill="#292929" points="4 8 8 8 8 4 4 4"/>
+    <polygon fill="#292929" points="12 8 16 8 16 4 12 4"/>
+    <polygon fill="#F2F2F2" points="8 8 12 8 12 4 8 4"/>
+    <polygon fill="#292929" points="0 11.999 4 11.999 4 7.999 0 7.999"/>
+    <polygon fill="#F2F2F2" points="4 12 8 12 8 8 4 8"/>
+    <polygon fill="#292929" points="8 12 12 12 12 8 8 8"/>
+    <polygon fill="#292929" points="16 12 20 12 20 8 16 8"/>
+    <polygon fill="#F2F2F2" points="12 12 16 12 16 8 12 8"/>
+    <polygon fill="#F2F2F2" points="0 16 4 16 4 12 0 12"/>
+    <polygon fill="#FF6665" points="16 16 20 16 20 12 16 12"/>
+    <polygon fill="#292929" points="4 16 8 16 8 12 4 12"/>
+    <polygon fill="#292929" points="12 16 16 16 16 12 12 12"/>
+    <polygon fill="#FF6665" points="8 16 12 16 12 12 8 12"/>
+    <polygon fill="#292929" points="0 19.999 4 19.999 4 15.999 0 15.999"/>
+    <polygon fill="#FF6665" points="4 20 8 20 8 16 4 16"/>
+    <polygon fill="#292929" points="8 20 12 20 12 16 8 16"/>
+    <polygon fill="#292929" points="16 20 20 20 20 16 16 16"/>
+    <polygon fill="#292929" points="20 8 24 8 24 4 20 4"/>
+    <polygon fill="#FF6665" points="20 11.999 24 11.999 24 7.999 20 7.999"/>
+    <polygon fill="#F2F2F2" points="20 19.999 24 19.999 24 15.999 20 15.999"/>
+    <polygon fill="#292929" points="20 16 24 16 24 12 20 12"/>
+    <polygon fill="#FF6665" points="12 20 16 20 16 16 12 16"/>
+    <polygon fill="#292929" points="20 24 24 24 24 20 20 20"/>
+    <polygon fill="#FF6665" points="0 24 4 24 4 20 0 20"/>
+    <polygon fill="#292929" points="4 24 8 24 8 20 4 20"/>
+    <polygon fill="#292929" points="12 24 16 24 16 20 12 20"/>
+    <polygon fill="#F2F2F2" points="16 24 20 24 20 20 16 20"/>
+    <polygon fill="#F2F2F2" points="8 24 12 24 12 20 8 20"/>
+    <polygon fill="#F2F2F2" points="20 4 24 4 24 0 20 0"/>
+    <polygon fill="#292929" points="16 4 20 4 20 0 16 0"/>
+    <polygon fill="#F2F2F2" points="12 4 16 4 16 0 12 0"/>
+    <polygon fill="#292929" points="8 4 12 4 12 0 8 0"/>
+    <polygon fill="#F2F2F2" points="4 4 8 4 8 0 4 0"/>
+    <polygon fill="#292929" points="0 4 4 4 4 0 0 0"/>
+  </g>
+</svg>

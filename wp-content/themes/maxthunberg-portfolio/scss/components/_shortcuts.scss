@@ -1,0 +1,12 @@
+.keyboard-shortcut {
+  display: block;
+  padding-left: .25rem;
+}
+
+@media screen and (max-width: $mq-sm) {
+
+  .keyboard-shortcut {
+    display: none;
+  }
+
+}

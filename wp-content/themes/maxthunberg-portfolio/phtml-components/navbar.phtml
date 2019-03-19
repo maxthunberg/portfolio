@@ -1,0 +1,46 @@
+<?php if ( is_front_page() == true ) : ?>
+
+	<!-- <nav class="navbar hide"> -->
+
+	  <!-- <div class="navbar--container"> -->
+
+	    <div class="navbar--logo hide">
+	        <a href="/#projects" class="logo__link">Max Thunberg</a>
+	    </div>
+
+			<?php include( get_template_directory() . '/phtml-components/display-mode.phtml');?>
+
+
+			<div class="navbar--menu hide">
+				<div class="icon-menu">
+					<div class="line line-1"></div>
+					<div class="line line-2"></div>
+					<span class="paragraph-xs">Menu</span>
+				</div>
+			</div>
+
+	  <!-- </div>
+
+
+
+	</nav> -->
+
+
+<?php else: ?>
+
+	<div class="navbar--logo project hide">
+			<a href="/#projects" class="btn btn-back btn-black"> <?php add_icon('icn-backspace'); ?> Back</a>
+	</div>
+
+
+
+	<div class="navbar--menu hide">
+		<div class="icon-menu">
+			<div class="line line-1 light"></div>
+			<div class="line line-2 light"></div>
+			<span class="paragraph-xs light">Menu</span>
+		</div>
+	</div>
+
+
+<?php endif; ?>

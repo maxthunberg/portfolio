@@ -1,0 +1,57 @@
+$color-white: #ffffff;
+$color-white--filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(105%) contrast(101%);
+$color-white-05: #F2F5F7;
+$color-lighter: #D7E2F0;
+$color-light: #BED2EB;
+$color-light--filter: invert(70%) sepia(2%) saturate(1783%) hue-rotate(166deg) brightness(85%) contrast(84%);
+$color-grey: #314156;
+$color-grey--filter: invert(36%) sepia(12%) saturate(747%) hue-rotate(164deg) brightness(83%) contrast(76%);
+// $color-dark: #2D363E;
+$color-dark: #263241;
+$color-dark--filter: invert(36%) sepia(12%) saturate(747%) hue-rotate(164deg) brightness(83%) contrast(76%);
+// $color-black: #1D242A;
+$color-black: #171E27;
+$color-black--filter: invert(8%) sepia(11%) saturate(1552%) hue-rotate(166deg) brightness(93%) contrast(86%);
+$color-black--extra: #000;
+
+$ui-01: $color-white;
+$color-white-05: #FBFBFF;
+$ui-02: $color-light;
+$ui-03: $color-dark;
+$ui-04: $color-black;
+$ui-05: $color-black--extra;
+
+$color-error: #E7384F;
+$color-links: #7C7CF5;
+
+
+$color-primary: #7C7CF5;
+$color-secondary: #7C7CF5;
+
+
+$project-01: #FF6665;
+$project-01-light: #FF7F7C;
+
+// $project-01: #34D5AB;
+// $project-01-light: #58EDCD;
+
+$project-02: #FF6041;
+$project-02-light: #FA8334;
+
+$project-03: #6565F3;
+$project-03-light: #7C7CF5;
+
+$project-04: #022A3A;
+$project-04-light: #35647E;
+
+$project-05: #D81B60;
+$project-05-light: #FF5C8D;
+
+$project-06: #101425;
+$project-06--secondary: #EB542D;
+$project-06-light: #1B2037;
+
+$color-dribbble: #ea4c89;
+$color-linkedin: #0077B5;
+$color-instagram: #d6249f;
+$color-instagram-gradient: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#292929" points="0 8 24 8 24 0 0 0"/>
+    <polygon fill="#F2F2F2" points="1 7 23 7 23 1 1 1"/>
+    <polygon fill="#292929" points="2 6 3 6 3 2 2 2"/>
+    <polygon fill="#F2F2F2" points="0 19 19 19 19 10 0 10"/>
+    <polygon fill="#CCCCCC" points="8 17 17 17 17 16 8 16"/>
+    <polygon fill="#CCCCCC" points="8 15 17 15 17 14 8 14"/>
+    <polygon fill="#CCCCCC" points="8 13 17 13 17 12 8 12"/>
+    <polygon fill="#FF6665" points="2 17 7 17 7 12 2 12"/>
+    <polygon fill="#292929" points="2 17 6 13 7 14 7 17"/>
+    <polygon fill="#F2F2F2" points="5 14 7 14 6 13"/>
+    <polygon fill="#F2F2F2" points="2 24 21 24 21 21 2 21"/>
+    <polygon fill="#CCCCCC" points="10 24 19 24 19 23 10 23"/>
+    <polygon fill="#58ED9F" points="4 24 9 24 9 23 4 23"/>
+    <polygon fill="#58ED9F" points="18 8.5 20 9.999 20 8.999 23 8.999 23 21 22 21 22 22 24 22 24 8 23 8 20 8 20 7"/>
+    <path fill="#292929" d="M19.625,2 C18.728,2 18,2.728 18,3.625 C18,4.522 18.728,5.25 19.625,5.25 C19.879,5.25 20.117,5.187 20.332,5.082 L21.25,6 L22,5.25 L21.082,4.332 C21.187,4.118 21.25,3.88 21.25,3.625 C21.25,2.728 20.522,2 19.625,2 M19.625,3 C19.97,3 20.25,3.28 20.25,3.625 C20.25,3.713 20.229,3.801 20.184,3.894 L20.088,4.089 L19.895,4.183 C19.801,4.228 19.713,4.25 19.625,4.25 C19.28,4.25 19,3.97 19,3.625 C19,3.28 19.28,3 19.625,3"/>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<?php if( have_rows('modal_shortcuts', 'option') ):?>
+
+    <?php	while( have_rows('modal_shortcuts', 'option') ): the_row();
+
+    // vars
+    $heading = get_sub_field('heading', 'option');
+    $paragraph = get_sub_field('paragraph', 'option');
+
+    ?>
+
+<div class="modal modal--shortcuts">
+
+  <div class="modal--container">
+
+    <div class="modal__close">
+      	<?php add_icon('icn-close'); ?>
+    </div>
+
+
+      <div class="modal--content">
+
+        <h3 class="heading-three"><?= $heading ?></h3>
+        <p class="paragraph-sm"><?= $paragraph ?></p>
+
+        <?php if( have_rows('shortcuts') ):?>
+
+          <div class="shortcut--container">
+
+            <?php	while( have_rows('shortcuts') ): the_row();
+
+            // vars
+            $keyIcon = get_sub_field('key', 'option');
+            $description = get_sub_field('description', 'option');
+
+            ?>
+
+              <div class="shortcut">
+
+                <?php add_icon($keyIcon); ?>
+
+                <p class="paragraph-sm shortcut__description"><?= $description ?></p>
+
+              </div>
+
+          <?php endwhile; ?>
+
+          </div>
+
+      <?php endif; ?>
+
+      </div>
+
+    </div>
+
+</div>
+
+<?php endwhile; ?>
+
+<?php endif; ?>

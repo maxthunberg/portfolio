@@ -1,0 +1,43 @@
+.project-overview {
+  @include linear-gradient(45deg, $color-black, $color-dark);
+  @include addFlex(column, center, center, 0);
+  padding: 6rem;
+  .project-overview__heading {
+    color: $color-white;
+    margin-bottom: 2rem;
+  }
+  .project-overview--container {
+    @include addFlex(0,0,0,wrap)
+    width: 100%;
+    .card-container {
+      @include addFlex(0,center,center,0)
+      width: calc(100%/2);
+      padding: 1.5rem;
+      max-height: 192px;
+      .card-link {
+        height: 100%;
+      }
+
+    }
+  }
+}
+
+
+@media screen and (max-width: $mq-md) {
+
+  .project-overview {
+    padding: 6rem 0rem;
+    .project-overview--container {
+      width: 100%;
+      .card-container {
+        width: 100%;
+        .card-link {
+
+        }
+
+      }
+    }
+  }
+
+
+}

@@ -1,67 +1,33 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFG7MVP');</script>
+  <!-- End Google Tag Manager -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="<?php bloginfo('charset'); ?>">
+  <link id="favicon" rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicons/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=thunberg-sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/uid3foz.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
+  <title><?php wp_title(''); ?></title>
   <?php wp_head(); ?>
+  <meta name="image" property="og:image" content="https://res.cloudinary.com/maxthunberg-com/image/upload/v1550758533/maxthunberg-linkedin-ogimg__v2_alo1t9.png">
 
 </head>
 
 <body>
 
-<nav class="header">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFG7MVP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-      <a href="/#Home" class="header-signature--white">Max Thunberg</a>
-
-
-  <div class="header-displaymode">
-    <div class="header-displaymode--carousel selected">
-        <div class="icn-carousel--frame">
-          <div class="icn-carousel--card0 default">
-
-          </div>
-
-          <div class="icn-carousel--card1 default">
-
-          </div>
-          <div class="icn-carousel--card2 default">
-
-          </div>
-          <div class="icn-carousel--card3 default">
-
-          </div>
-        </div>
-      <!-- <img class="icn-carousel ui ui--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-carousel--black.svg" /> -->
-    </div>
-
-    <div class="header-displaymode--grid not-selected">
-      <div class="icn-grid--frame">
-        <div class="icn-grid--card icn-grid--card1">
-
-        </div>
-        <div class="icn-grid--card icn-grid--card2">
-
-        </div>
-        <div class="icn-grid--card icn-grid--card3">
-
-        </div>
-
-        <div class="icn-grid--card icn-grid--card4">
-
-        </div>
-        <div class="icn-grid--card icn-grid--card5">
-
-        </div>
-        <div class="icn-grid--card icn-grid--card6">
-
-        </div>
-
-      </div>
-      <!-- <img class="icn-grid ui ui--white" src="<?php echo get_bloginfo( 'template_directory' ); ?>/icons/icn-grid--black.svg" /> -->
-    </div>
-
-  </div>
-
-</nav>
+<?php include( get_template_directory() . '/phtml-components/navbar.phtml');?>

@@ -1,0 +1,7 @@
+body {
+  @include body-text;
+  color: $color-dark;
+  background-color: $color-white;
+  line-height: 1.5;
+  // text-rendering: geometricPrecision;
+}

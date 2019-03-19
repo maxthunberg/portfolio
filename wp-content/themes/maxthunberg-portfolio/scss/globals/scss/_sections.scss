@@ -1,0 +1,70 @@
+
+.one {
+  background-color: $project-01;
+}
+
+.two {
+  background-color: $project-02;
+}
+
+.three {
+  background-color: $project-03;
+}
+
+.four {
+  background-color: $project-04;
+}
+
+.five {
+  background-color: $color-white;
+}
+
+.six {
+  background-color: $project-06;
+}
+
+.fixed-hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0!important;
+  height: 100%;
+  width: 100vw!important;
+  .card {
+    height: 100%;
+  }
+}
+
+
+.bg-gradient {
+  // @include linear-gradient(45deg, $color-black, $color-dark);
+  background-color: $color-white-05;
+}
+.one--gradient, .agrowth--gradient {
+  @include linear-gradient(45deg, $project-01, $project-01-light);
+}
+
+.two--gradient, .sendify--gradient {
+  @include linear-gradient(45deg, $project-02, $project-02-light);
+}
+
+.three--gradient, .thunberg-sans--gradient {
+  @include linear-gradient(45deg, $project-03, $project-03-light);
+}
+
+.four--gradient, .express-delivery--gradient {
+  @include linear-gradient(45deg, $project-04, $project-04-light);
+}
+
+.five--gradient, .humblebee--gradient {
+  @include linear-gradient(45deg, $project-05, $project-05-light);
+}
+
+.six--gradient, .int3-software--gradient {
+  @include linear-gradient(45deg, $project-06, $project-06);
+}
+
+.base--gradient {
+  @include linear-gradient(45deg, $color-black, $color-dark);
+}

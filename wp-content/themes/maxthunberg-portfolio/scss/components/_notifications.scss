@@ -1,0 +1,73 @@
+.notification-placement {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.notification {
+  @include addFlex(0, center, flex-start, wrap);
+  display: none;
+  position: relative;
+  width: rem(384px);
+  background-color: $color-white-05;
+  border-radius: .5rem;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: $box-shadow-two;
+  z-index: 10000;
+  bottom: -2rem;
+  opacity: 0;
+  transition: $transition--enter__fast;
+  .notification--content {
+    width: 336;
+  }
+  .notification--btn {
+    @include addFlex(0, center, center, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-left: 1px solid rgba($color-dark, .1);
+    background-color: $color-white-05;
+    width: 3rem;
+    cursor: pointer;
+    svg {
+      height: 1.5rem;
+      width: auto;
+    }
+    .svg-color {
+      height: 2rem;
+      width: auto;
+      fill: $color-dark;
+    }
+
+    &:hover {
+      .svg-color {
+        fill: $color-error;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: $box-shadow-four;
+    transition: $transition--exit__fast;
+  }
+}
+
+.notification.is-active {
+  display: flex;
+}
+
+.notification.is-visible {
+  opacity: 1;
+  bottom: 0;
+  transition: $transition--exit__fast;
+}
+
+@media screen and (max-width: $mq-sm) {
+
+  .notification {
+    display: none!important;
+  }
+
+}

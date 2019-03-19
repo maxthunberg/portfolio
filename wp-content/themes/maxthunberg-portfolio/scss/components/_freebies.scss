@@ -1,0 +1,141 @@
+.module-freebies {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+}
+
+.module-wallpapers, .module-iconsets, .module-posters {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+}
+
+.module-wallpapers {
+  background-color: $project-03 ;
+}
+
+.module-iconsets {
+  background-color: $project-06;
+
+}
+
+.margin-topbottom {
+  margin: $space*2 0;
+}
+
+
+.iconset-template {
+  background-color: $project-06;
+  background-image: url('images/iconset-template-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.iconset-roundie {
+  background-color: #ff358b;
+  background-image: url('images/freebie-iconset-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.scienceposter {
+  background-color: $color-black;
+  background-image: url('images/bg-butterflyeffect.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.posters-cities {
+  background-color: $color-black;
+  background-image: url('images/wallpaper_globen_1920.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.btn-freebies {
+    position: absolute;
+    // bottom: 64px;
+    // left: 32px;
+    top:0;
+    right: 32px;
+    border: none;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+
+.module-card-50--freebies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: $space*4 $space*4 $space*8 $space*4;
+  width: 100%;
+  z-index: 0;
+  .row-5050 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    a {
+      width: 100%;
+      .card-50 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 $space;
+        min-width: $space*15;
+        height: $space*20;
+        box-shadow: $box-shadow-one;
+        border-radius: 4px;
+        transition: $transition--enter__normal;
+        &:hover {
+          box-shadow: $box-shadow-four;
+          transition: $transition--enter__normal;
+        }
+        &:active {
+          box-shadow: $box-shadow-two;
+          transition: $transition--enter__normal;
+        }
+        .card-50--left {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          padding-left: $space*2;
+          width: 50%;
+          height: 100%;
+        }
+        .card-50--right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 50%;
+          height: 100%;
+          img {
+            position: absolute;
+            width: 448px;
+            height: auto;
+            left:0;
+          }
+
+        }
+      }
+    }
+  }
+
+}

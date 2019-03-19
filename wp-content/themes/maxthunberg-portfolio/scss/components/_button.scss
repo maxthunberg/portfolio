@@ -1,0 +1,220 @@
+.btn {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  border-radius:3px;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1rem; // 16px
+  line-height: 1rem; // 14px
+  height: 2.75rem; // 44px
+  width: auto;
+  margin-left: .5rem;
+  padding: 0 .875rem; // 0px 14px
+  text-align: center;
+  text-decoration: none;
+  color: $color-white;
+  background: $color-dark;
+  transition: $transition--enter__fast;
+  box-shadow: $box-shadow-two;
+  white-space: nowrap;
+  &:hover {
+    color: $color-white;
+    background: $color-dark;
+    transform:translateY(-1px);
+    -ms-transform:translateY(-1px); /* prefix for IE 9 */
+    -webkit-transform:translateY(-1px); /* prefix for Safari and Chrome */
+    box-shadow: $box-shadow-four;
+    transition: $transition--exit__fast;
+  }
+  &:active {
+    // transform:translateY(0px);
+    // -ms-transform:translateY(0px); /* prefix for IE 9 */
+    // -webkit-transform:translateY(0px); /* prefix for Safari and Chrome */
+    // box-shadow: none;
+  }
+  &.disabled {
+    transform:translateY(0px);
+    -ms-transform:translateY(0px); /* prefix for IE 9 */
+    -webkit-transform:translateY(0px); /* prefix for Safari and Chrome */
+    opacity: .5;
+    box-shadow: none!important;
+    cursor: not-allowed;
+  }
+  &:first-of-type {
+    margin-left: 0;
+  }
+  .svg-color, .btn__icon, svg, i {
+    height: 1rem;
+    font-size: 1rem;
+    margin-right: .5rem;
+    width: auto;
+  }
+}
+
+.btn-icon {
+  .svg-color, .btn__icon, svg, i {
+    margin-right: 0;
+  }
+}
+
+// .btn {
+//   &:focus {
+//     outline: none!important;
+//     box-shadow:0 5px 10px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,.05), 0 0 0 2px $color-grey;
+//     border-radius: 3px;
+//     &:active {
+//       transform:translateY(0px);
+//       -ms-transform:translateY(0px); /* prefix for IE 9 */
+//       -webkit-transform:translateY(0px); /* prefix for Safari and Chrome */
+//       box-shadow: none;
+//     }
+//   }
+// }
+
+// Button Sizes
+.btn-sm {
+  font-size: .8125rem; // 13px
+  line-height: .875rem; // 14px
+  height: 2.25rem; // 32px
+  padding: 0 .75rem; // 0px 12px
+  .svg-color, .btn__icon, svg, i {
+    height: .75rem;
+    font-size: .75rem;
+    margin-right: .375rem;
+  }
+}
+
+.btn-md { // Default
+  font-size: 1rem; // 16px
+  line-height: 1rem; // 14px
+  height: 2.75rem; // 44px
+  padding: 0 .875rem; // 0px 14px
+  .svg-color, .btn__icon, svg, i {
+    height: 1rem;
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+}
+
+.btn-lg {
+  font-size: 1.25rem; // 20px
+  line-height: 1.25rem; // 20px
+  height: 3.5rem; // 56px
+  padding: 0 1rem; // 0px 16px
+  border-radius: 4px;
+  .svg-color, .btn__icon, svg, i {
+    height: 1.25rem;
+    font-size: 1.25rem;
+    margin-right: .5rem;
+  }
+}
+
+
+
+// Button Styles
+
+.btn-black {
+  color: $color-white;
+  background: $color-dark;
+  .svg-color, .svg-color, .btn__icon, svg, i {
+    fill: $color-white;
+    color: $color-white;
+  }
+  &:hover {
+    color: $color-white;
+    background: $color-dark;
+  }
+}
+
+.btn-white {
+  color: $color-dark;
+  background: $color-white;
+  .svg-color, .btn__icon, svg, i {
+    fill: $color-dark;
+    color: $color-dark;
+  }
+  &:hover {
+    color: $color-dark;
+    background: $color-white;
+  }
+}
+
+.btn-purple {
+  color: $color-white;
+  background: $project-03;
+  .svg-color, .btn__icon, svg, i {
+    fill: $color-white;
+    color: $color-white;
+  }
+  &:hover {
+    color: $color-white;
+    background: $project-03-light;
+  }
+}
+
+.btn-error {
+  color: $color-white;
+  background: $color-error;
+  .svg-color, .btn__icon, svg, i{
+    fill: $color-white;
+    color: $color-white;
+  }
+  &:hover {
+    color: $color-white;
+    background: $color-error;
+  }
+}
+
+
+
+// Button Modifiers
+
+.btn-fullwidth {
+  width: 100%;
+}
+
+.btn-sm.btn-wide {
+  padding: 0 1.5rem;
+}
+
+.btn-md.btn-wide, .btn-wide {
+  padding: 0 1.75rem;
+}
+
+.btn-lg.btn-wide {
+  padding: 0 2rem;
+}
+
+.btn.btn-outline {
+  box-shadow: none;
+  transform:translateY(0);
+  -ms-transform:translateY(0); /* prefix for IE 9 */
+  -webkit-transform:translateY(0); /* prefix for Safari and Chrome */
+}
+.btn-black.btn-outline {
+  color: $color-dark;
+  border: 1px solid $color-dark;
+  background: transparent;
+  .svg-color, .btn__icon, svg, i {
+    fill: $color-dark;
+    color: $color-dark;
+  }
+}
+
+.btn-white.btn-outline {
+  color: $color-white;
+  border: 1px solid $color-white;
+  background: transparent;
+  .svg-color, .btn__icon, svg, i {
+    fill: $color-white;
+    color: $color-white;
+  }
+}
+
+// For small devices
