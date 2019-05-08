@@ -24,7 +24,7 @@ function init_remove_support(){
 }
  add_action('wp_enqueue_scripts', function () {
 
-	$version = '2.1.94';
+	$version = '2.2.01';
 
   wp_deregister_script('jquery');
 

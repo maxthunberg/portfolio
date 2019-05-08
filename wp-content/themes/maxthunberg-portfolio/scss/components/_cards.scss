@@ -102,33 +102,33 @@
 
 }
 
-.card.project-1 .card-right img {
+.card.project-6 .card-right img {
   height: 320px;
   margin-top: 4rem;
 }
 
-.card.project-2 .card-right img {
+.card.project-3 .card-right img {
   height: 100vh;
   margin-left: -256px;
   margin-top: 4rem;
 }
 
-.card.project-3 .card-right img {
+.card.project-1 .card-right img {
   height: 256px;
   margin-top: 4rem;
 }
 
-.card.project-4 .card-right img {
+.card.project-2 .card-right img {
   height: 100vh;
   margin-top: 4rem;
 }
 
-.card.project-5 .card-right img {
+.card.project-4 .card-right img {
   height: 340px;
   margin-top: 4rem;
 }
 
-.card.project-6 .card-right img {
+.card.project-5 .card-right img {
   height: 100vh;
   margin-left: -480px;
   margin-top: 4rem;
@@ -334,19 +334,24 @@
   }
 
 
-  .card.project-1 .card-right img {
+  .card.project-6 .card-right img {
     height: 320px;
     margin-top: 4rem;
   }
 
-  .card.project-2 .card-right img {
+  .card.project-3 .card-right img {
     height: 100vh;
     margin-left: -112px;
     margin-top: 4rem;
   }
 
-  .card.project-3 .card-right img {
+  .card.project-1 .card-right img {
     height: 256px;
+    margin-top: 4rem;
+  }
+
+  .card.project-2 .card-right img {
+    height: 100vh;
     margin-top: 4rem;
   }
 
@@ -356,11 +361,6 @@
   }
 
   .card.project-5 .card-right img {
-    height: 100vh;
-    margin-top: 4rem;
-  }
-
-  .card.project-6 .card-right img {
     height: 100vh;
     margin-left: 160px;
     margin-top: 4rem;
@@ -373,19 +373,24 @@
 
 @media screen and (max-width: $mq-xs) {
 
-  .card.project-1 .card-right img {
+  .card.project-6 .card-right img {
     height: 320px;
     margin-top: 4rem;
   }
 
-  .card.project-2 .card-right img {
+  .card.project-3 .card-right img {
     height: 100vh;
     margin-left: -112px;
     margin-top: 4rem;
   }
 
-  .card.project-3 .card-right img {
+  .card.project-1 .card-right img {
     height: 256px;
+    margin-top: 4rem;
+  }
+
+  .card.project-2 .card-right img {
+    height: 100vh;
     margin-top: 4rem;
   }
 
@@ -395,11 +400,6 @@
   }
 
   .card.project-5 .card-right img {
-    height: 100vh;
-    margin-top: 4rem;
-  }
-
-  .card.project-6 .card-right img {
     height: 100vh;
     margin-left: -40px;
     margin-top: 4rem;

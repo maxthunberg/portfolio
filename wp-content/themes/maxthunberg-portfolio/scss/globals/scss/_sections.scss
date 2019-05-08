@@ -41,27 +41,27 @@
   // @include linear-gradient(45deg, $color-black, $color-dark);
   background-color: $color-white-05;
 }
-.one--gradient, .agrowth--gradient {
+.one--gradient, .thunberg-sans--gradient {
   @include linear-gradient(45deg, $project-01, $project-01-light);
 }
 
-.two--gradient, .sendify--gradient {
+.two--gradient, .express-delivery--gradient {
   @include linear-gradient(45deg, $project-02, $project-02-light);
 }
 
-.three--gradient, .thunberg-sans--gradient {
+.three--gradient, .sendify--gradient {
   @include linear-gradient(45deg, $project-03, $project-03-light);
 }
 
-.four--gradient, .express-delivery--gradient {
+.four--gradient, .humblebee--gradient {
   @include linear-gradient(45deg, $project-04, $project-04-light);
 }
 
-.five--gradient, .humblebee--gradient {
-  @include linear-gradient(45deg, $project-05, $project-05-light);
+.five--gradient, .int3-software--gradient {
+  @include linear-gradient(45deg, $project-05, $project-05);
 }
 
-.six--gradient, .int3-software--gradient {
+.six--gradient, .agrowth--gradient {
   @include linear-gradient(45deg, $project-06, $project-06);
 }
 

@@ -57,7 +57,7 @@ Template Name: Front Page
 															// vars
 															$client = get_sub_field('client');
 															$name = get_sub_field('name');
-															$alttext = get_sub_field('alt_text');
+															$alt = get_sub_field('alt_text');
 															$image = get_sub_field('image');
 															$i++;
 															$a++;
@@ -86,7 +86,7 @@ Template Name: Front Page
 																										$image,  // ACF-field
 																										'g_south,q_90,c_fill', // Parameters
 																										'featured-image image-loaded', // Classes
-																										$alttext // alt text
+																										$alt // alt text
 																									);
 
 																								endif; ?>

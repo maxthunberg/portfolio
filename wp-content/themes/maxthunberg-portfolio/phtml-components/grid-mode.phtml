@@ -27,11 +27,11 @@
 									// vars
 									$client = get_sub_field('client');
 									$name = get_sub_field('name');
-									$alt_text = get_sub_field('alt_text');
+									$alt = get_sub_field('alt_text');
 									$image = get_sub_field('image');
 									$i++;
 									$a++;
-									$gradient = array("agrowth", "sendify", "thunberg-sans", "express-delivery", "humblebee", "int3-software");
+									$gradient = array("thunberg-sans", "express-delivery", "sendify", "humblebee", "int3-software", "agrowth");
 									?>
 								<div class="card-container">
 
@@ -56,7 +56,7 @@
 																					$image,  // ACF-field
 																					'g_south,q_90,c_fill', // Parameters
 																					'featured-image', // Classes
-																					$alttext // alt text
+																					$alt // alt text
 																				);
 
 																			endif; ?>

@@ -4,7 +4,7 @@
 
 		// vars
 		$image = get_sub_field('image');
-		$alttext = get_sub_field('alttext');
+		$alt = get_sub_field('alt_text');
 		$title = get_sub_field('name');
 		$client = get_sub_field('client');
 		$projectname = strtolower(get_the_title());
@@ -24,7 +24,7 @@
 										$image,  // ACF-field
 										'g_south,q_90,c_fill', // Parameters
 										'hero--image__img', // Classes
-										$alttext // alt text
+										$alt // alt text
 									);
 
 								endif; ?>

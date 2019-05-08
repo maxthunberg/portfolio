@@ -147,14 +147,14 @@
 
 .btn-purple {
   color: $color-white;
-  background: $project-03;
+  background: $project-01;
   .svg-color, .btn__icon, svg, i {
     fill: $color-white;
     color: $color-white;
   }
   &:hover {
     color: $color-white;
-    background: $project-03-light;
+    background: $project-01-light;
   }
 }
 

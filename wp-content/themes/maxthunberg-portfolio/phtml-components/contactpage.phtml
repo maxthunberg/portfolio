@@ -9,6 +9,7 @@ while( have_rows('contact_section') ): the_row();
 	$basic = get_sub_field('basic');
 	$advanced = get_sub_field('advanced');
 	$image = get_sub_field('image');
+	$alt = get_sub_field('alt_text');
 
 	?>
 
@@ -60,7 +61,7 @@ while( have_rows('contact_section') ): the_row();
 										$image,  // ACF-field
 										'g_south,q_90,c_fill', // Parameters
 										'contact--image__img', // Classes
-										$alttext // alt text
+										$alt // alt text
 									);
 
 								endif; ?>

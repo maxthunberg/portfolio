@@ -13,8 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="<?php bloginfo('charset'); ?>">
   <link id="favicon" rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicons/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=thunberg-sans" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/uid3foz.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
   <title><?php wp_title(''); ?></title>

@@ -18,7 +18,7 @@ if( have_rows('project_content') ):
             if( get_row_layout() == 'fullwidth_image' ):
 
               $image = get_sub_field('image');
-              $alttext = get_sub_field('alttext');
+              $alt = get_sub_field('alt_text');
               ?>
               <div class="component fullwidth-image ui-section light-section">
 
@@ -31,7 +31,7 @@ if( have_rows('project_content') ):
                                   $image,  // ACF-field
                                   'g_south,q_90,c_fill', // Parameters
                                   'component--fullwidth-image', // Classes
-                                  $alttext // alt text
+                                  $alt // alt text
                                 );
 
                               endif; ?>
@@ -104,7 +104,9 @@ if( have_rows('project_content') ):
                   <?php // loop through the rows of data
                         while ( have_rows('image_repeater') ) : the_row();
 
-                    $image = get_sub_field('image');?>
+                    $image = get_sub_field('image');
+                    $alt = get_sub_field('alt_text');
+                    ?>
 
                     <div class="component image revealer-0 ui-section dark-section">
                           <div class="component--outer">
@@ -115,7 +117,7 @@ if( have_rows('project_content') ):
                                               $image,  // ACF-field
                                               'g_south,q_90,c_fill,w_640', // Parameters
                                               'component--image__img', // Classes
-                                              $alttext // alt text
+                                              $alt // alt text
                                             );
 
                                           endif; ?>
@@ -139,6 +141,7 @@ if( have_rows('project_content') ):
 
               $text = get_sub_field('text');
               $image = get_sub_field('image');
+              $alt = get_sub_field('alt_text');
               ?>
 
             <div class="component focus-area ui-section light-section">
@@ -154,7 +157,7 @@ if( have_rows('project_content') ):
                                           $image,  // ACF-field
                                           'g_south,q_90,c_fill,w_480', // Parameters
                                           'component--image__img', // Classes
-                                          $alttext // alt text
+                                          $alt // alt text
                                         );
 
                                       endif; ?>
@@ -319,6 +322,7 @@ if( have_rows('project_content') ):
                                     while ( have_rows('carrier_row') ) : the_row();
 
                                 $image = get_sub_field('image');
+                                $alt = get_sub_field('alt_text');
                                 $label = get_sub_field('label');
                                 ?>
 
@@ -330,7 +334,7 @@ if( have_rows('project_content') ):
                                       $image,  // ACF-field
                                       'g_south,q_90,c_fill,w_320', // Parameters
                                       'component--image__img', // Classes
-                                      $alttext // alt text
+                                      $alt // alt text
                                     );
 
                                   endif; ?>
@@ -372,6 +376,7 @@ if( have_rows('project_content') ):
                                     while ( have_rows('mobile_screens') ) : the_row();
 
                                 $image = get_sub_field('image');
+                                $alt = get_sub_field('alt_text');
                                 ?>
 
                                 <div class="mobile-screen--container revealer-<?=$i++?>00">
@@ -382,7 +387,7 @@ if( have_rows('project_content') ):
                                       $image,  // ACF-field
                                       'g_south,q_60,c_fill,w_448', // Parameters
                                       'mobile-screen__image', // Classes
-                                      $alttext // alt text
+                                      $alt // alt text
                                     );
 
                                   endif; ?>
