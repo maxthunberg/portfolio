@@ -1,0 +1,29 @@
+$box-shadow: rgba(0, 0, 0, 0.15);
+$box-shadow--primary: rgba(114,114,244, 0.05);
+
+$box-shadow-one: 0 2px 4px 0 $box-shadow, 0 1px 2px 0 $box-shadow--primary;
+$box-shadow-two: 0 4px 8px 0 $box-shadow, 0 2px 4px 0 $box-shadow--primary;
+$box-shadow-three: 0 8px 16px 0 $box-shadow, 0 4px 8px 0 $box-shadow--primary;
+$box-shadow-four: 0 12px 24px 0 $box-shadow, 0 6px 12px 0 $box-shadow--primary;
+$box-shadow-five: 0 16px 32px 0 $box-shadow, 0 8px 16px 0 $box-shadow--primary;
+
+// Layer box-shadow map
+$layer-shadows: (
+  zero: none,
+  one: $box-shadow-one,
+  two: $box-shadow-two,
+  three: $box-shadow-three,
+  four: $box-shadow-four,
+  five: $box-shadow-five
+);
+
+// Layer mixin
+@mixin layer($layer) {
+  @if global-variable-exists('css--use-layer') == false or $css--use-layer == true {
+    @if map-has-key($layer-shadows, $layer) {
+      box-shadow: #{map-get($layer-shadows, $layer)};
+    } @else {
+      @warn '#{$layer} is not a valid layer.';
+    }
+  }
+}

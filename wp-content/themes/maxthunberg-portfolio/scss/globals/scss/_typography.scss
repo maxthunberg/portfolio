@@ -1,0 +1,597 @@
+$font-family: 'Miranda Sans', "Arial", Helvetica, sans-serif !default;
+
+$base-font-size: 16px!default;
+
+$typescale-map: (
+  'one' : 3.5rem,         'one-mobile' : 2.5rem,
+  'two' : 2.5rem,        'two-mobile' : 2rem,
+  'three' : 2rem,         'three-mobile' : 1.5rem,
+  'four' : 1.5rem,        'four-mobile' : 1.25rem,
+  'five' : 1.125rem,      'five-mobile' : 1rem,
+
+  's-one' : 1.25rem,      's-one-mobile' : 1.25rem,
+  's-two' : 1rem,         's-two-mobile' : 1rem,
+  's-three' : .875rem,    's-three-mobile' : .75rem,
+  's-four' : .75rem,      's-four-mobile' : .5rem,
+
+  'p' : 1.25rem,          'p-mobile' : 1.125rem,
+  'p-sm' : 1rem,          'p-sm-mobile' : 0.875rem,
+  'p-xs' : 0.75rem,       'p-xs-mobile' : 0.75rem
+  );
+
+$margin-map: (
+  'one' : 0 0 2rem 0,         'one-mobile' : 0 0 1.5rem 0,
+  'two' : 0 0 1.5rem 0,       'two-mobile' : 0 0 1rem 0,
+  'three' : 0 0 1rem 0,       'three-mobile' : 0 0 .75rem 0,
+  'four' : 0 0 .5rem 0,       'four-mobile' : 0 0 .5rem 0,
+  'five' : 0 0 .25rem 0,      'five-mobile' : 0 0 .25rem 0,
+
+  's-one' : 0 0 .25rem 0,    's-one-mobile' : 0 0 .25rem 0,
+  's-two' : 0 0 .25rem 0,    's-two-mobile' : 0 0 .25rem 0,
+  's-three' : 0 0 .25rem 0,  's-three-mobile' : 0 0 .25rem 0,
+  's-four' : 0 0 .25rem 0,   's-four-mobile' : 0 0 .25rem 0,
+
+  'p' : .0 0 1.5rem 0,        'p-mobile' : 0 0 1.5rem 0,
+  'p-sm' : 0 0 1rem 0,        'p-sm-mobile' : 0 0 1rem 0,
+  'p-xs' : 0 0 .25rem 0,      'p-xs-mobile' : 0 0 .25rem 0,
+);
+
+$line-height-map: (
+  'one' : 1.25,           'one-mobile' : 1.25,
+  'two' : 1.25,           'two-mobile' : 1.25,
+  'three' : 1.25,         'three-mobile' : 1.25,
+  'four' : 1.25,          'four-mobile' : 1.25,
+  'five' : 1.25,          'five-mobile' : 1.25,
+
+  's-one' : 1.25,         's-one-mobile' : 1.25,
+  's-two' : 1.25,         's-two-mobile' : 1.25,
+  's-three' : 1.25,       's-three-mobile' : 1.25,
+  's-four' : 1.25,        's-four-mobile' : 1.25,
+
+  'p' : 1.5,             'p-mobile' : 1.5,
+  'p-sm' : 1.5,          'p-sm-mobile' : 1.5,
+  'p-xs' : 1.5,       'p-xs-mobile' : 1.5,
+);
+
+$font-weight-map: (
+  'one' : 500,            'one-mobile' : 500,
+  'two' : 500,           'two-mobile' : 500,
+  'three' : 500,          'three-mobile' : 500,
+  'four' : 500,           'four-mobile' : 500,
+  'five' : 500,           'five-mobile' : 500,
+
+  's-one' : 400,            's-one-mobile' : 400,
+  's-two' : 400,            's-two-mobile' : 400,
+  's-three' : 400,          's-three-mobile' : 400,
+  's-four' : 400,           's-four-mobile' : 400,
+
+  'p' : 400,              'p-mobile' : 400,
+  'p-sm' : 400,           'p-sm-mobile' : 400,
+  'p-xs' : 400,        'p-xs-mobile' : 400,
+);
+
+$letterspacing-map: (
+  's-one' :  6px,
+  's-two' :  5px,
+  's-three' : 4px,
+  's-four' :  3px,
+);
+
+@mixin letter-spacing($size: null) {
+  @if map-has-key($letterspacing-map, $size) {
+    letter-spacing: map-get($letterspacing-map, $size);
+  } @else {
+    letter-spacing: 0.25rem;
+  }
+}
+
+@mixin typescale($size) {
+  @if map-has-key($typescale-map, $size) {
+    font-size: map-get($typescale-map, $size);
+  } @else {
+    @warn 'This is not a step of the Sendify type scale!';
+  }
+}
+
+@mixin line-height($height) {
+  @if map-has-key($line-height-map, $height) {
+    line-height: map-get($line-height-map, $height);
+  } @else {
+    @warn 'This is not a step of the Sendify type scale!';
+  }
+}
+
+@mixin font-weight($weight) {
+  @if map-has-key($font-weight-map, $weight) {
+    font-weight: map-get($font-weight-map, $weight);
+  } @else {
+    @warn 'This is not a step of the Sendify type scale!';
+  }
+}
+
+@mixin margin($margin) {
+  @if map-has-key($margin-map, $margin) {
+    margin: map-get($margin-map, $margin);
+  } @else {
+    @warn 'This is not a step of the Sendify type scale!';
+  }
+}
+
+@function rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+@function em($px) {
+  @return ($px / $base-font-size) * 1em;
+}
+
+@mixin heading-text {
+  font-family: $font-family;
+}
+
+@mixin subheading-text {
+  font-family: $font-family;
+}
+
+@mixin body-text {
+  font-family: $font-family;
+}
+
+// Loading of fonts
+
+@font-face {
+  font-family: 'Miranda Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:  url('../../../fonts/MirandaSansv105-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Miranda Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:  url('../../../fonts/MirandaSansv105-Medium.woff2') format('woff2');
+}
+
+// Only applied to bold weight text
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Default styling for various elements
+input,textarea {
+  @include body-text;
+  @include typescale('p-sm');
+  @include font-weight('p-sm');
+}
+
+ul, ol {
+  @include typescale('p');
+  @include line-height('p');
+  @include font-weight('p');
+  @include margin('p');
+  li {
+    position: relative;
+    padding: .5rem 0 .5rem 1.5rem;
+    &:after {
+      position: absolute;
+      height: .5rem;
+      width: .5rem;
+      left: 0;
+    }
+  }
+}
+
+ul {
+  li {
+    &:after {
+      content:'';
+      top: 1.25rem;
+      background-color: $color-black;
+      border-radius: 50%;
+    }
+  }
+}
+
+ol {
+  counter-reset: item;
+  li {
+    &:after {
+      top: .5rem;
+      content: counters(item, '.')'.';
+      counter-increment: item;
+
+    }
+  }
+}
+
+.cky-title {
+  font-weight: 600!important;
+}
+
+
+button {
+@include heading-text;
+font-weight: 400;
+}
+
+a.link {
+  @include body-text;
+  font-weight: 400;
+  color: $color-links;
+  text-decoration: none;
+  &.subtle {
+      color: $color-black;
+  }
+}
+
+@media (hover: hover) {
+  a.link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .heading-one,
+  .heading-two,
+  .heading-three,
+  .heading-four,
+  .heading-five {
+    text-align: left;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    color: $color-black;
+    text-rendering: geometricPrecision;
+
+    // Modifiers - Alignment
+    &.center {
+      text-align: center;
+      max-width: none;
+    }
+
+    &.right {
+      text-align: right;
+    }
+
+    &.no-margin {
+      margin-bottom: 0;
+    }
+
+    // Modifiers - Colors
+    &.light {
+      color: $color-white;
+      strong {
+        color: $color-white;
+        font-weight: 700;
+      }
+    }
+
+    &.bold, strong {
+      color: $color-black;
+      font-weight: 700;
+    }
+
+  }
+
+  .sub-heading-one,
+  .sub-heading-two,
+  .sub-heading-three,
+  .sub-heading-four,
+  .sub-heading-five {
+    text-align: left;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: $color-grey;
+    text-rendering: geometricPrecision;
+
+    // Modifiers - Alignment
+    &.center {
+      text-align: center;
+      max-width: none;
+    }
+
+    &.right {
+      text-align: right;
+    }
+
+    &.no-margin {
+      margin-bottom: 0;
+    }
+
+    // Modifiers - Colors
+    &.light {
+      color: rgba($color-white,.8);
+      strong {
+        color: $color-white;
+        font-weight: 700;
+      }
+    }
+
+    &.bold, strong {
+      color: $color-black;
+      font-weight: 700;
+    }
+
+  }
+
+  .paragraph,
+  .paragraph-sm,
+  .paragraph-xs, p {
+    text-align: left;
+    width: 100%;
+    max-width: $maxwidth-text;
+    margin: 0;
+    padding: 0;
+    color: $color-dark;
+    text-rendering: geometricPrecision;
+
+    // Modifiers - Alignment
+    &.center {
+      text-align: center;
+      max-width: none;
+    }
+
+    &.right {
+      text-align: right;
+    }
+
+    &.no-margin {
+      margin-bottom: 0;
+    }
+
+    // Modifiers - Colors
+    &.light {
+      color: rgba($color-white,.8);
+      strong {
+        color: $color-white;
+        font-weight: 700;
+      }
+    }
+
+    strong {
+      color: $color-black;
+      font-weight: 700;
+    }
+
+  }
+
+
+  // Typography structure
+
+  h1,
+  .heading-one {
+    @include typescale('one');
+    @include line-height('one');
+    @include font-weight('one');
+    @include margin('one');
+  }
+
+  h2,
+  .heading-two {
+    @include typescale('two');
+    @include line-height('two');
+    @include font-weight('two');
+    @include margin('two');
+  }
+
+  h3,
+  .heading-three {
+    @include typescale('three');
+    @include line-height('three');
+    @include font-weight('three');
+    @include margin('three');
+  }
+
+  h4,
+  .heading-four {
+    @include typescale('four');
+    @include line-height('four');
+    @include font-weight('four');
+    @include margin('four');
+  }
+
+  h5,
+  h6,
+  .heading-five {
+    @include typescale('five');
+    @include line-height('five');
+    @include font-weight('five');
+    @include margin('five');
+  }
+
+
+
+  .sub-heading-one {
+    @include typescale('s-one');
+    @include line-height('s-one');
+    @include font-weight('s-one');
+    @include margin('s-one');
+    @include letter-spacing('s-one');
+  }
+
+  .sub-heading-two {
+    @include typescale('s-two');
+    @include line-height('s-two');
+    @include font-weight('s-two');
+    @include margin('s-two');
+    @include letter-spacing('s-two');
+  }
+
+  .sub-heading-three {
+    @include typescale('s-three');
+    @include line-height('s-three');
+    @include font-weight('s-three');
+    @include margin('s-three');
+    @include letter-spacing('s-three');
+  }
+
+  .sub-heading-four {
+    @include typescale('s-four');
+    @include line-height('s-four');
+    @include font-weight('s-four');
+    @include margin('s-four');
+    @include letter-spacing('s-four');
+  }
+
+
+  p,
+  .paragraph {
+    @include typescale('p');
+    @include line-height('p');
+    @include font-weight('p');
+    @include margin('p');
+  }
+
+  .paragraph-sm {
+    @include typescale('p-sm');
+    @include line-height('p-sm');
+    @include font-weight('p-sm');
+    @include margin('p-sm');
+  }
+
+  .paragraph-xs {
+    @include typescale('p-xs');
+    @include line-height('p-xs');
+    @include font-weight('p-xs');
+    @include margin('p-xs');
+  }
+
+
+  // Typography for small devices
+
+  @media screen and (max-width: $mq-sm) {
+
+    h1,
+    .heading-one {
+      @include typescale('one-mobile');
+      @include line-height('one-mobile');
+      @include font-weight('one-mobile');
+      @include margin('one-mobile');
+    }
+
+    h2,
+    .heading-two {
+      @include typescale('two-mobile');
+      @include line-height('two-mobile');
+      @include font-weight('two-mobile');
+      @include margin('two-mobile');
+    }
+
+    h3,
+    .heading-three {
+      @include typescale('three-mobile');
+      @include line-height('three-mobile');
+      @include font-weight('three-mobile');
+      @include margin('three-mobile');
+    }
+
+    h4,
+    .heading-four {
+      @include typescale('four-mobile');
+      @include line-height('four-mobile');
+      @include font-weight('four-mobile');
+      @include margin('four-mobile');
+    }
+
+    h5,
+    h6,
+    .heading-five {
+      @include typescale('five-mobile');
+      @include line-height('five-mobile');
+      @include font-weight('five-mobile');
+      @include margin('five-mobile');
+    }
+
+
+
+    .sub-heading-one {
+      @include typescale('s-one-mobile');
+      @include line-height('s-one-mobile');
+      @include font-weight('s-one-mobile');
+      @include margin('s-one-mobile');
+      letter-spacing: 5px;
+    }
+
+    .sub-heading-two {
+      @include typescale('s-two-mobile');
+      @include line-height('s-two-mobile');
+      @include font-weight('s-two-mobile');
+      @include margin('s-two-mobile');
+      letter-spacing: 4px;
+    }
+
+    .sub-heading-three {
+      @include typescale('s-three-mobile');
+      @include line-height('s-three-mobile');
+      @include font-weight('s-three-mobile');
+      @include margin('s-three-mobile');
+      letter-spacing: 3px;
+    }
+
+    .sub-heading-four {
+      @include typescale('s-four-mobile');
+      @include line-height('s-four-mobile');
+      @include font-weight('s-four-mobile');
+      @include margin('s-four-mobile');
+      letter-spacing: 2px;
+    }
+
+
+
+    p,
+    .paragraph {
+      @include typescale('p-mobile');
+      @include line-height('p-mobile');
+      @include font-weight('p-mobile');
+      @include margin('p-mobile');
+    }
+
+    .paragraph-sm {
+      @include typescale('p-sm-mobile');
+      @include line-height('p-sm-mobile');
+      @include font-weight('p-sm-mobile');
+      @include margin('p-sm-mobile');
+    }
+
+    .paragraph-xs {
+      @include typescale('p-xs-mobile');
+      @include line-height('p-xs-mobile');
+      @include font-weight('p-xs-mobile');
+      @include margin('p-xs-mobile');
+    }
+
+    ul, ol {
+      @include typescale('p-mobile');
+      @include line-height('p-mobile');
+      @include font-weight('p-mobile');
+      @include margin('p-mobile');
+      li {
+        position: relative;
+        padding: .5rem 0 .5rem 1.5rem;
+        &:after {
+          position: absolute;
+          height: .5rem;
+          width: .5rem;
+          left: 0;
+        }
+      }
+    }
+
+
+
+}

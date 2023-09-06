@@ -1,0 +1,52 @@
+<?php if( have_rows('project_info') ):
+
+while( have_rows('project_info') ): the_row();
+
+	// vars
+	$client = get_sub_field('client');
+	$year = get_sub_field('year');
+	$role = get_sub_field('role');
+	$agency = get_sub_field('agency');
+	$team = get_sub_field('team');
+
+	?>
+	<div class="details ui-section dark-section">
+		<div class="details--container">
+
+			<div class="details--col">
+
+					<div class="details--group">
+						<p class="sub-heading-four light revealer-100">CLIENT</p>
+						<p class="heading-five light revealer-200"><?= $client ?></p>
+					</div>
+
+					<div class="details--group">
+						<p class="sub-heading-four light revealer-100">YEAR</p>
+						<p class="heading-five light revealer-200"><?= $year ?></p>
+					</div>
+
+					<div class="details--group">
+						<p class="sub-heading-four light revealer-100">ROLE</p>
+						<p class="heading-five light revealer-200"><?= $role ?></p>
+					</div>
+					<div class="details--group">
+						<p class="sub-heading-four light revealer-100">AGENCY</p>
+						<p class="heading-five light revealer-200"><?= $agency ?></p>
+					</div>
+
+			</div>
+
+			<div class="details--col">
+					<div class="details--group">
+						<p class="sub-heading-four light revealer-100">Team</p>
+						<p class="heading-five light revealer-200"><?= $team ?></p>
+					</div>
+			</div>
+
+		</div>
+
+	</div>
+
+<?php endwhile; ?>
+
+<?php endif; ?>

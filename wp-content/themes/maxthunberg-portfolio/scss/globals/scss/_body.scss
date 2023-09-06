@@ -1,0 +1,31 @@
+body {
+  @include body-text;
+  color: $color-dark;
+  background-color: $color-white-03;
+  line-height: 1.5;
+  text-rendering: geometricPrecision;
+}
+
+@media screen and (max-width: $mq-xs) {
+
+  html.fixed, body.fixed {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grain {
+    height: 100%;
+  }
+
+}

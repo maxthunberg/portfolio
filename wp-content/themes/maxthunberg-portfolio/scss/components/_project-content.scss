@@ -1,0 +1,709 @@
+.project-content {
+  background: $color-white-05;
+  overflow: hidden;
+}
+
+.component {
+  @include addFlex(column,center,center,0);
+  .component--outer {
+    @include addFlex(0,center,center,0);
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1024px;
+      .component--container {
+        width: 100%;
+        max-width: 620px;
+      }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-content {
+  .glyphs-section {
+    &:last-child {
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+
+// Components
+
+
+// Text Section
+.component.text-section {
+  padding: 6rem 0 4rem;
+  .component--outer {
+    .component--container {
+
+    }
+  }
+}
+
+
+// Fullwidth image
+.component.fullwidth-image {
+  .component--outer {
+    padding: 0;
+    max-width: none;
+    .component--container {
+      @include addFlex(0,0,0,0);
+      max-width: none;
+      .component--fullwidth-image {
+        width: 100%;
+        height: auto;
+      }
+
+    }
+  }
+}
+
+// Mobile Screens
+.component.mobile-screens {
+  .component--outer {
+    padding: 4rem 0;
+    .component--container {
+      max-width: none;
+      .mobile-screens {
+        @include addFlex(0,0,0,wrap);
+        width: 100%;
+        height: auto;
+        .mobile-screen--container {
+          width: 50%;
+          padding: 2rem;
+          .mobile-screen__image {
+            max-width: 100%;
+            border: 1px solid $color-border;
+            border-radius: .5rem;
+          }
+        }
+        .mobile-screen--container:nth-child(2n+2) {
+          .mobile-screen__image {
+          transform: translateY(6rem);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+// Icon section
+
+.component.icon-section {
+  padding: 6rem 0;
+  .component--outer {
+    .component--container {
+
+      .icon-section {
+        @include addFlex(0,0,0,wrap);
+        width: 100%;
+
+        .icon-section--container {
+          @include addFlex(column,center,center,0);
+          width: calc(100%/6);
+          padding: 1rem 0;
+          .icon-section--img {
+            @include addFlex(0,center,center,0);
+            width: 6rem;
+            height: 6rem;
+
+            .large {
+              width: 3rem;
+
+            }
+            .small {
+              width: 2rem;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+// Glyphs section
+
+.component.glyphs-section {
+  padding: 2rem 0;
+  .component--outer {
+    .component--container {
+      max-width: 641px;
+      .glyph-section {
+        @include addFlex(0,0,0,wrap);
+        border-top: 1px solid $color-white-20;
+        border-left: 1px solid $color-white-20;
+        width: 100%;
+        margin-top: .5rem;
+
+        .glyph {
+          @include addFlex(0,center,center,wrap);
+          font-size: 40px;
+          line-height: 1;
+          height: 4rem;
+          width: 4rem;
+          border: 1px solid $color-white-20;
+          border-left: none;
+          border-top: none;
+
+        }
+
+      }
+
+    }
+  }
+}
+
+// Type section
+
+.component.type-section {
+  padding: 6rem 0;
+  .component--outer {
+    .component--container {
+      max-width: 641px;
+      .type-area {
+        @include addFlex(0,0,0,wrap);
+        width: 100%;
+        textarea::-webkit-input-placeholder {
+          color: $color-dark;
+        }
+
+        textarea:-moz-placeholder { /* Firefox 18- */
+          color: $color-dark;
+        }
+
+        textarea::-moz-placeholder {  /* Firefox 19+ */
+          color: $color-dark;
+        }
+
+        textarea:-ms-input-placeholder {
+          color: $color-dark;
+        }
+
+        textarea::placeholder {
+          color: $color-dark;
+        }
+        textarea {
+          width: 100%;
+          resize: none;
+          border: 1px solid $color-border;
+          outline: none;
+          padding: 1rem;
+          line-height: 1.5;
+          background-color: $color-white-05;
+          border-radius: .5rem;
+          margin: 1.5rem 0;
+          &.sm {
+            font-size: 1rem;
+          }
+          &.md {
+            font-size: 1.5rem;
+          }
+          &.lg {
+            font-size: 2rem;
+          }
+
+        }
+
+        button {
+          outline: none;
+          margin-right: .5rem;;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+// Image
+.image-component-wrapper {
+  padding: 4rem 0;
+}
+
+.component.image {
+  padding-bottom: 2rem;
+  .component--outer {
+    .component--container {
+      .component--image__img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid $color-border;
+        border-radius: .5rem;
+      }
+
+    }
+  }
+}
+
+// Focus Area
+.component.focus-area {
+  .component--outer {
+    padding: 0 2rem;
+    .component--container {
+      max-width: none;
+      .focus-area {
+        @include addFlex(0,center,0,0);
+
+        .focus-area--image-container {
+          @include addFlex(0,0,0,0);
+          width: 50%;
+          height: 100%;
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+        .focus-area--text-container {
+          @include addFlex(0,center,0,0);
+          width: 50%;
+          height: 100%;
+          padding: 2rem;
+          h3 {
+            font-size: 32px;
+            color: $color-white;
+          }
+
+        }
+      }
+
+    }
+  }
+}
+
+
+// Carrier Images
+.component.carrier-images {
+  .component--outer {
+    padding: 0 4rem;
+    .component--container {
+      max-width: none;
+      .carrier-images {
+        @include addFlex(0,center,0,wrap);
+
+        .carrier-images--container {
+          padding: 0 2rem;
+          width: 20%;
+          min-width: 160px;
+          img {
+            max-width: 100%;
+            margin-bottom: 2rem;
+          }
+          span {
+
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+
+
+// Branding
+
+// Skyltmax - Image Archive discoverability
+
+.project-content.image-archive-discoverability {
+  .component {
+    .heading-one, .heading-two, .heading-three, .heading-four, .heading-five {
+      color: $color-black;
+    }
+  }
+  .component.focus-area {
+      @include linear-gradient(45deg, $project-01, $project-01-light);
+    .component--outer {
+      .component--container {
+        .focus-area {
+          .focus-area--text-container {
+            h3 {
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Skyltmax - Checkout Page Optimisation
+
+.project-content.checkout-page-optimisation {
+  .component {
+    .heading-one, .heading-two, .heading-three, .heading-four, .heading-five {
+      color: $color-black;
+    }
+  }
+  .component.focus-area {
+      @include linear-gradient(45deg, $project-02, $project-02-light);
+    .component--outer {
+      .component--container {
+        .focus-area {
+          .focus-area--text-container {
+            h3 {
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Skyltmax - Make Product Preview Better
+
+.project-content.make-product-preview-better {
+  .component {
+    .heading-one, .heading-two, .heading-three, .heading-four, .heading-five {
+      color:$project-03;
+    }
+  }
+  .component.focus-area {
+      @include linear-gradient(45deg, $project-03, $project-03-light);
+  }
+
+}
+
+
+// Miranda Sans
+
+.project-content.typeface-design {
+
+  .component {
+    .heading-one, .heading-two, .heading-three, .heading-four, .heading-five {
+      color:$project-04;
+    }
+  }
+  .component.focus-area {
+      @include linear-gradient(45deg, $project-04, $project-04-light);
+  }
+
+}
+
+
+// Express Delivery
+
+.project-content.website-redesign {
+
+  .component {
+    .heading-one, .heading-two, .heading-three, .heading-four, .heading-five {
+      color:$project-05-light;
+    }
+  }
+  .component.focus-area {
+      @include linear-gradient(45deg, $project-05, $project-05-light);
+  }
+
+}
+
+// Sendify
+
+.project-content.illustrations {
+
+  .component {
+    .heading-one, .heading-two, .heading-three, .heading-four, .heading-five {
+      color: $project-06;
+    }
+  }
+  .component.focus-area {
+      @include linear-gradient(45deg, $project-06, $project-06-light);
+  }
+
+}
+
+
+@media screen and (max-width: $mq-md) {
+
+
+  // Icon section
+
+  .component.icon-section {
+    .component--outer {
+      .component--container {
+
+        .icon-section {
+          @include addFlex(0,0,0,wrap);
+          width: 100%;
+
+          .icon-section--container {
+            @include addFlex(column,center,center,0);
+            width: calc(100%/3);
+            padding: 1rem 0;
+            .icon-section--img {
+              @include addFlex(0,center,center,0);
+              width: 6rem;
+              height: 6rem;
+
+              .large {
+                width: 3rem;
+
+              }
+              .small {
+                width: 2rem;
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+
+  // Carrier Images
+  .component.carrier-images {
+    .component--outer {
+      padding: 0 4rem;
+      .component--container {
+        max-width: none;
+        .carrier-images {
+          @include addFlex(0,center,0,wrap);
+
+          .carrier-images--container {
+            padding: 3rem 2rem;
+            width: 50%;
+            min-width: 160px;
+            img {
+              max-width: 100%;
+              margin-bottom: 2rem;
+            }
+            span {
+
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: $mq-sm) {
+
+  .component {
+    .component--outer {
+      padding: 0 1.5rem;
+    }
+  }
+
+  // Text Section
+  .component--text-section {
+    @include addFlex(column,0,0,wrap);
+    padding: 6rem 2rem;
+    .component--text-section__heading {
+      padding: 0rem;
+    }
+
+    .col {
+      width: 100%;
+      padding: 0rem;
+      margin-bottom: 2rem;
+      min-width: auto;
+    }
+
+  }
+
+
+
+  // Icon section
+
+  .component.icon-section {
+    .component--outer {
+      .component--container {
+
+        .icon-section {
+          @include addFlex(0,0,0,wrap);
+          width: 100%;
+
+          .icon-section--container {
+            @include addFlex(row,center,center,0);
+            width: 100%;
+            .icon-section--img {
+              @include addFlex(column,center,center,0);
+              width: 12rem;
+              height: 10rem;
+
+              .large {
+                width: 6rem;
+
+              }
+              .small {
+                width: 4rem;
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+  // Focus Area
+  .component.focus-area {
+    .component--outer {
+      padding: 4rem 2rem;
+      .component--container {
+        max-width: none;
+        .focus-area {
+          @include addFlex(column,center,0,0);
+
+          .focus-area--image-container {
+            width: 100%;
+          }
+          .focus-area--text-container {
+            width: 100%;
+            padding: 1rem 0 0 0;
+            h3 {
+              font-size: 24px;
+              text-align: center;
+              width: 100%;
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+
+  // Carrier Images
+  .component.carrier-images {
+    .component--outer {
+      padding: 0 4rem;
+      .component--container {
+        max-width: none;
+        .carrier-images {
+          @include addFlex(0,center,0,wrap);
+
+          .carrier-images--container {
+            padding: 4rem;
+            width: 100%;
+            min-width: 160px;
+            img {
+              max-width: 100%;
+              margin-bottom: 2rem;
+            }
+            span {
+
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+
+
+}
+
+@media screen and (max-width: $mq-xs) {
+
+
+.component {
+  .component--outer {
+    padding: 0 1rem;;
+  }
+}
+
+
+  // Carrier Images
+  .component.carrier-images {
+    .component--outer {
+      padding: 0 4rem;
+      .component--container {
+        max-width: none;
+        .carrier-images {
+          @include addFlex(0,center,0,wrap);
+
+          .carrier-images--container {
+            padding: 3rem 2rem;
+            width: 100%;
+            min-width: 160px;
+            img {
+              max-width: 100%;
+              margin-bottom: 2rem;
+            }
+            span {
+
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+
+  // // Mobile Screens
+  // .component.mobile-screens {
+  //   .component--outer {
+  //     padding: 0;
+  //     .component--container {
+  //       max-width: none;
+  //       .mobile-screens {
+  //         display: flex;
+  //         flex-wrap: wrap;
+  //         width: 100%;
+  //         height: auto;
+  //         .mobile-screen--container {
+  //           width: 100%;
+  //           padding: .75rem;
+  //           .mobile-screen__image {
+  //             max-width: 100%;
+  //           }
+  //         }
+  //         .mobile-screen--container:nth-child(2n+2) {
+  //           .mobile-screen__image {
+  //           transform: translateY(0);
+  //           }
+  //         }
+  //       }
+  //     }
+
+  //   }
+  // }
+
+
+  // Mobile Screens
+.component.mobile-screens {
+  .component--outer {
+    .component--container {
+      .mobile-screens {
+        .mobile-screen--container {
+          width: 100%;
+          padding: 1rem;
+        }
+        .mobile-screen--container:nth-child(2n+2) {
+          .mobile-screen__image {
+          transform: translateY(0);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+}

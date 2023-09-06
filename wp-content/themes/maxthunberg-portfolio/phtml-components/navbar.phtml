@@ -1,0 +1,24 @@
+<?php if ( is_front_page() == true ) : ?>
+
+	<nav class="navbar front-page hide">
+	    <a href="/" class="link subtle logo">Max Thunberg</a>
+		<?php include( get_template_directory() . '/phtml-components/display-mode.phtml');?>
+		<a href="/about" class="button button-about button-secondary">About</a>
+	</nav>
+
+
+<?php elseif ( is_page(567) || is_page(622) ): ?>
+
+	<nav class="navbar about-page hide">
+		<a href="/" class="button button-back button-primary"> <?php add_icon('arrow-left-large'); ?>Back</a>
+		<a href="/" class="button button-projects button-secondary">Projects</a>
+	</nav>
+
+<?php else: ?>
+
+	<nav class="navbar project hide">
+		<a href="/" class="button button-back button-primary"> <?php add_icon('arrow-left-large'); ?>Back</a>
+		<a href="/about" class="button button-about button-secondary no-margin">About</a>
+	</nav>
+
+<?php endif; ?>

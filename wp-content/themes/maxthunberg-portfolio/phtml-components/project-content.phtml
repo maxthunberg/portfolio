@@ -1,0 +1,443 @@
+<?php
+
+if( have_rows('project_content') ):
+
+    $branding = get_field('select_branding');
+    ?>
+
+  <div class="project-content <?= $branding; ?>">
+
+<?php  	// loop through the rows of data
+    while ( have_rows('project_content') ) : the_row();?>
+
+
+		  <?php // COMPONTENT - Fullwidth Image
+            if( get_row_layout() == 'fullwidth_image' ):
+
+              $image = get_sub_field('image');
+              $alt = get_sub_field('alt_text');
+              $darkBackground = get_sub_field('dark_background');
+
+              ?>
+              <div class="component fullwidth-image ui-section <?= ( $darkBackground === true ) ? 'dark-section' : 'light-section' ?>">
+
+                <div class="component--outer">
+
+                  <div class="component--container">
+                      <?php	if( !empty($image) ):
+
+                                echo add_image(
+                                  $image,  // ACF-field
+                                  'g_south,q_70,c_fill,f_auto', // Parameters
+                                  'component--fullwidth-image', // Classes
+                                  $alt // alt text
+                                );
+
+                              endif; ?>
+                  </div>
+
+                </div>
+            </div>
+
+      <?php endif; ?>
+
+
+
+      <?php // COMPONTENT - H2 Section
+            if( get_row_layout() == 'text_section' ):
+
+              $overwriteTag = get_sub_field('overwrite_tags');
+              $overwriteSize = get_sub_field('overwrite_sizes');
+
+              $sTag = get_sub_field('subheading_tag');
+              $sTagValue = $sTag['value'];
+              $sSize = get_sub_field('subheading_size');
+              $sSizeValue = $sSize['value'];
+              $subheading = get_sub_field('subheading');
+
+              $hTag = get_sub_field('heading_tag');
+              $hTagValue = $hTag['value'];
+              $hSize = get_sub_field('heading_size');
+              $hSizeValue = $hSize['value'];
+
+              $heading = get_sub_field('heading');
+              $paragraph = get_sub_field('paragraph');
+
+              if ( $overwriteSize !== true ) {
+                  $sSizeValue = 'three';
+                  $hSizeValue = 'two';
+              }
+
+              if ( $overwriteTag !== true ) {
+                  $sTagValue = '5';
+                  $hTagValue = '2';
+              }
+
+              ?>
+
+            <div class="component text-section ui-section light-section">
+
+              <div class="component--outer">
+                <div class="component--container">
+                  <h<?=$sTagValue?> class="sub-heading-<?=$sSizeValue?> revealer-100"><?= $subheading ?></h<?=$sTagValue?>>
+                  <h<?=$hTagValue?> class="heading-<?=$hSizeValue?> revealer-200"><?= $heading ?></h<?=$hTagValue?> >
+
+                        <div class="col revealer-300">
+                          <p><?= $paragraph ?></p>
+                        </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+
+      <?php endif; ?>
+
+      <?php // COMPONTENT - Image
+            if( get_row_layout() == 'image' ): ?>
+
+              <?php // check if the nested repeater field has rows of data
+                    if( have_rows('image_repeater') ):?>
+                  <div class="image-component-wrapper">
+
+                  <?php // loop through the rows of data
+                        while ( have_rows('image_repeater') ) : the_row();
+
+                    $image = get_sub_field('image');
+                    $alt = get_sub_field('alt_text');
+                    ?>
+
+                    <div class="component image revealer-0 ui-section light-section">
+                          <div class="component--outer">
+                                <div class="component--container">
+                                  <?php	if( !empty($image) ):
+
+                                            echo add_image(
+                                              $image,  // ACF-field
+                                              'g_south,q_70,c_fill,f_auto,w_640', // Parameters
+                                              'component--image__img', // Classes
+                                              $alt // alt text
+                                            );
+
+                                          endif; ?>
+
+                                </div>
+                          </div>
+                    </div>
+
+                  <?php endwhile;?>
+                </div>
+
+               <?php endif;?>
+
+
+
+      <?php endif; ?>
+
+
+      <?php // COMPONTENT - Focus area
+            if( get_row_layout() == 'focus_area' ):
+
+              $text = get_sub_field('text');
+              $image = get_sub_field('image');
+              $alt = get_sub_field('alt_text');
+              $darkBackground = get_sub_field('dark_background');
+              ?>
+
+            <div class="component focus-area ui-section <?= ( $darkBackground === true ) ? 'dark-section' : 'light-section' ?>">
+                  <div class="component--outer">
+                        <div class="component--container">
+
+                          <div class="focus-area">
+                            <div class="focus-area--image-container revealer-0">
+
+                              <?php	if( !empty($image) ):
+
+                                        echo add_image(
+                                          $image,  // ACF-field
+                                          'g_south,q_70,c_fill,f_auto,w_960', // Parameters
+                                          'component--image__img', // Classes
+                                          $alt // alt text
+                                        );
+
+                                      endif; ?>
+
+                            </div>
+                            <div class="focus-area--text-container revealer-100">
+                              <h3><?= $text ?></h3>
+                            </div>
+                          </div>
+
+                        </div>
+                  </div>
+            </div>
+
+      <?php endif; ?>
+
+
+      <?php // COMPONTENT - Glyphs Section
+            if( get_row_layout() == 'glyphs' ):
+              $subheading = get_sub_field('subheading');
+              $active = get_sub_field('active');
+
+              ?>
+
+              <?php // check if the nested repeater field has rows of data
+                    if( have_rows('glyphs_repeater') ):
+                      ?>
+                      <?php if ( $active === true ): ?>
+                        <div class="component glyphs-section ui-section light-section">
+                            <div class="component--outer">
+                                  <div class="component--container">
+                                    <h5 class="sub-heading-three"><?=$subheading ?></h5>
+                                      <div class="glyph-section">
+
+                                      <?php // loop through the rows of data
+                                            while ( have_rows('glyphs_repeater') ) : the_row();
+
+                                            $glyph = get_sub_field('glyph');
+                                            $active = get_sub_field('active');
+
+                                            ?>
+
+                                            <?php if ( $active === true ): ?>
+
+                                              <div class="glyph">
+                                                <?= $glyph ?>
+                                              </div>
+
+                                            <?php endif; ?>
+
+                                      <?php endwhile;?> 
+
+                                    </div>
+                              </div>
+                          </div>
+                      </div>
+                    <?php endif; ?>
+
+               <?php endif;?>
+
+      <?php endif; ?>
+
+
+
+      <?php // COMPONTENT - Typeface Type Section
+            if( get_row_layout() == 'type_section' ):
+
+              $heading = get_sub_field('heading');
+              $subheading = get_sub_field('subheading');
+              ?>
+
+              <div class="component type-section ui-section light-section">
+                    <div class="component--outer">
+                          <div class="component--container">
+                              <h3 class="sub-heading-four"><?= $subheading ?></h3>
+                              <h3 class="heading-three"><?= $heading ?></h3>
+
+                              <div class="type-area">
+
+                                <textarea class="md" rows="3" cols="50" placeholder="">Here you can type anything and test Thunberg Sans</textarea>
+                                <p class="paragraph-sm">Select font size:</p>
+                                <button class="button button-primary type-sm">16px</button>
+                                <button class="button button-primary type-md">24px</button>
+                                <button class="button button-primary type-lg">32px</button>
+
+                            </div>
+                      </div>
+                  </div>
+              </div>
+
+      <?php endif; ?>
+
+
+      <?php // COMPONTENT - Icons Section
+            if( get_row_layout() == 'icon_section' ):
+              ?>
+
+              <?php // check if the nested repeater field has rows of data
+                    if( have_rows('icon_repeater') ):
+
+                      ?>
+
+                    <div class="component icon-section ui-section light-section">
+                          <div class="component--outer">
+                                <div class="component--container">
+                                    <div class="icon-section">
+
+                  <?php // loop through the rows of data
+                        while ( have_rows('icon_repeater') ) : the_row();
+
+                        $lg = get_sub_field('icon_lg');
+                        $sm = get_sub_field('icon_sm');
+
+                        ?>
+
+                                    <div class="icon-section--container">
+
+                                        <div class="icon-section--img">
+                                            <img class="icon-section--image__img large" src="<?= $lg["url"] ?>" />
+                                        </div>
+
+                                        <div class="icon-section--img">
+                                            <img class="icon-section--image__img small" src="<?= $sm["url"] ?>" />
+                                        </div>
+
+                                    </div>
+
+                        <?php endwhile;?>
+
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+               <?php endif;?>
+
+
+      <?php endif; ?>
+
+
+
+      <?php // COMPONTENT - Carrier images
+            if( get_row_layout() == 'carrier_images' ):
+
+              $label = get_sub_field('label');
+              $image = get_sub_field('image');
+              ?>
+
+            <div class="component carrier-images ui-section light-section">
+                  <div class="component--outer">
+                        <div class="component--container">
+
+                          <?php // check if the nested repeater field has rows of data
+                                if( have_rows('carrier_row') ):
+
+                                  $i = 1;
+                                  ?>
+
+                                <div class="carrier-images">
+
+                              <?php // loop through the rows of data
+                                    while ( have_rows('carrier_row') ) : the_row();
+
+                                $image = get_sub_field('image');
+                                $alt = get_sub_field('alt_text');
+                                $label = get_sub_field('label');
+                                ?>
+
+                                <div class="carrier-images--container revealer-<?=$i++?>00">
+
+                                  <?php	if( !empty($image) ):
+
+                                    echo add_image(
+                                      $image,  // ACF-field
+                                      'g_south,q_70,c_fill,f_auto,w_320', // Parameters
+                                      'component--image__img', // Classes
+                                      $alt // alt text
+                                    );
+
+                                  endif; ?>
+                                  <span class=""><?= $label ?></span>
+                                </div>
+
+                              <?php endwhile;?>
+
+                              </div>
+
+                           <?php endif;?>
+
+                        </div>
+                  </div>
+            </div>
+
+      <?php endif; ?>
+
+
+
+      <?php // COMPONTENT - Mobile images
+            if( get_row_layout() == 'mobile_screens' ):
+
+              ?>
+
+            <div class="component mobile-screens ui-section light-section">
+                  <div class="component--outer">
+                        <div class="component--container">
+
+                          <?php // check if the nested repeater field has rows of data
+                                if( have_rows('mobile_screens') ):
+
+                                  $i = 1;
+                                  ?>
+
+                                <div class="mobile-screens">
+
+                              <?php // loop through the rows of data
+                                    while ( have_rows('mobile_screens') ) : the_row();
+
+                                $image = get_sub_field('image');
+                                $alt = get_sub_field('alt_text');
+                                ?>
+
+                                <div class="mobile-screen--container revealer-<?=$i++?>00">
+
+                                  <?php	if( !empty($image) ):
+
+                                    echo add_image(
+                                      $image,  // ACF-field
+                                      'g_south,q_70,c_fill,w_960', // Parameters
+                                      'mobile-screen__image', // Classes
+                                      $alt // alt text
+                                    );
+
+                                  endif; ?>
+
+                                </div>
+
+                              <?php endwhile;?>
+
+                              </div>
+
+                           <?php endif;?>
+
+                        </div>
+                  </div>
+            </div>
+
+      <?php endif; ?>
+
+
+      <?php // COMPONTENT - Example
+            if( get_row_layout() == 'h2_section' ):?>
+
+            <?php // check if the nested repeater field has rows of data
+                  if( have_rows('h2_section') ):?>
+
+                <?php // loop through the rows of data
+                      while ( have_rows('h2') ) : the_row();
+
+                  $image = get_sub_field('image');?>
+
+                  <h1><?= $image?></h1>
+
+                <?php endwhile;?>
+
+
+             <?php endif;?>
+
+      <?php endif; ?>
+
+
+<?php endwhile;?>
+
+  </div>
+
+<?php else :
+
+    // no layouts found
+
+endif;
+
+?>

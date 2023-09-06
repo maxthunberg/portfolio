@@ -1,0 +1,353 @@
+.button {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: auto;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background: $color-black;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: $color-white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 1;
+    cursor: pointer;
+    transition: $transition--enter__instant;
+    outline: none;
+  &:active {
+   background: $color-black;  
+  }
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+  &.disabled {
+    transform:translateY(0px);
+    -webkit-transform:translateY(0px); /* prefix for Safari and Chrome */
+    opacity: .5;
+    box-shadow: none!important;
+    cursor: not-allowed;
+  }
+  &:first-of-type {
+    margin-left: 0;
+  }
+  .svg-color, .button__icon, svg, i {
+    height: 1rem;
+    font-size: 1rem;
+    margin-right: .5rem;
+    width: auto;
+    transition: $transition--enter__instant;
+    transition: margin $duration--fast__enter $easing--enter;
+  }
+}
+
+@media (hover: hover) {
+  .button {      
+    &:hover {
+      color: $color-white;
+      background: $color-dark;
+      transition: $transition--enter__instant;
+      .svg-color, .button__icon, svg, i {
+        margin-right: .75rem;
+        margin-left: -.25rem;
+        transition: $transition--enter__instant;
+        transition: margin $duration--fast__enter $easing--enter;
+      }
+    }
+  }
+}
+
+.button-icon {
+  .svg-color, .button__icon, svg, i {
+    margin-right: 0;
+  }
+}
+
+// Button Sizes
+.button-sm {
+  font-size: .8125rem; // 13px
+  line-height: .875rem; // 14px
+  height: 2.25rem; // 32px
+  padding: 0 .75rem; // 0px 12px
+  .svg-color, .button__icon, svg, i {
+    height: .75rem;
+    font-size: .75rem;
+    margin-right: .375rem;
+  }
+}
+
+.button-md { // Default
+  font-size: 1rem; // 16px
+  line-height: 1rem; // 14px
+  height: 2.75rem; // 44px
+  padding: 0 .875rem; // 0px 14px
+  .svg-color, .button__icon, svg, i {
+    height: 1rem;
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+}
+
+.button-lg {
+  font-size: 1.25rem; // 20px
+  line-height: 1.25rem; // 20px
+  height: 3.5rem; // 56px
+  padding: 0 1rem; // 0px 16px
+  border-radius: 4px;
+  .svg-color, .button__icon, svg, i {
+    height: 1.25rem;
+    font-size: 1.25rem;
+    margin-right: .5rem;
+  }
+}
+
+
+
+// Button Styles
+
+.button-primary, .cky-btn-accept, .cky-btn-reject {
+  color: $color-white;
+  background: $color-black;
+  .svg-color, .svg-color, .button__icon, svg, i {
+    fill: $color-white;
+    color: $color-white;
+  }
+  &:active {
+    color: $color-white;
+    background: $color-black;
+  }
+  &.light {
+    color: $color-black;
+    background: $color-white-05;
+    border: 1px solid $color-white-15;
+    .svg-color, .svg-color, .button__icon, svg, i {
+      fill: $color-black;
+      color: $color-black;
+    }
+    &:active {
+      color: $color-black;
+      background: $color-white;
+    }
+  }
+}
+
+.button-secondary, .cky-btn-customize {
+  color: $color-black;
+  background: rgba($color-black, .05);
+  border: 1px solid rgba($color-black, .1);
+  .svg-color, .button__icon, svg, i {
+    fill: $color-black;
+    color: $color-black;
+  }
+  &.light {
+    color: $color-white;
+    background: rgba($color-white, .1);
+    border: 1px solid rgba($color-white, .15);
+    .svg-color, .button__icon, svg, i {
+      fill: $color-white;
+      color: $color-white;
+    }
+  }
+}
+
+.button-white {
+  color: $color-black;
+  background: $color-white-05;
+  border: 1px solid $color-white-10;
+  .svg-color, .button__icon, svg, i {
+    fill: $color-black;
+    color: $color-black;
+  }
+}
+
+@media (hover: hover) {
+
+  .button-primary, .cky-btn-accept, .cky-btn-reject {
+    &:hover {
+      color: $color-white;
+      background: $color-dark;
+    }
+    &.light {
+      &:hover {
+        color: $color-black;
+        background: $color-white-10;
+        border: 1px solid $color-white-20;
+      }
+    }
+  }
+
+  .button-secondary, .cky-btn-customize {
+    &:hover {
+      color: $color-black;
+      background: rgba($color-black, .1);
+      border: 1px solid rgba($color-black, .15);
+    }
+    &.light {
+      &:hover {
+        color: $color-white;
+        background: rgba($color-white, .15);
+        border: 1px solid rgba($color-white, .2);
+      }
+
+    }
+  }
+
+  .icon-right {
+    &:hover {
+      .svg-color, .button__icon, svg, i {
+        margin-left: .75rem;
+        margin-right: -.25rem;
+      }
+    }
+  }
+
+
+  .cky-consent-container {
+    .cky-btn {
+        &:hover {
+          color: $color-white;
+          background: $color-dark;
+          transition: $transition--enter__instant;
+          opacity: 1!important;
+
+      }
+      &.cky-btn-accept, 
+      &.cky-btn-reject {
+        &:hover {
+          color: $color-white!important;
+          background: $color-dark!important;
+        }
+      }
+      &.cky-btn-customize {
+        &:hover {
+          color: $color-black!important;
+          background: rgba($color-black, .1)!important;
+          border: 1px solid rgba($color-black, .1)!important;
+        }
+      }
+    }
+  }
+
+}
+
+// Button Modifiers
+
+.button-fullwidth {
+  width: 100%;
+}
+
+.button-sm.button-wide {
+  padding: 0 1.5rem;
+}
+
+.button-md.button-wide, .button-wide {
+  padding: 0 1.75rem;
+}
+
+.button-lg.button-wide {
+  padding: 0 2rem;
+}
+
+.icon-right {
+  .svg-color, .button__icon, svg, i {
+    margin-right: 0;
+    margin-left: .5rem;
+  }
+}
+
+.cky-consent-container {
+  .cky-btn {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: auto;
+      height: 2.5rem;
+      padding: 0 1rem;
+      background: $color-black;
+      border: 1px solid transparent!important;
+      border-radius: .25rem;
+      color: $color-white;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1rem;
+      letter-spacing: 0;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      margin-right: 0.5rem;
+      opacity: 1!important;
+      cursor: pointer;
+      transition: $transition--enter__instant;
+      outline: none;
+      &.cky-btn-accept, 
+      &.cky-btn-reject {
+        color: $color-white!important;
+        background: $color-black!important;
+        .svg-color, .svg-color, .button__icon, svg, i {
+          fill: $color-white!important;
+          color: $color-white!important;
+        }
+        &:active {
+          color: $color-white!important;
+          background: $color-black!important;
+        }
+      } 
+    &.cky-btn-customize {
+      color: $color-black!important;
+      background: rgba($color-black, .05)!important;
+      border: 1px solid rgba($color-black, .1)!important;
+      .svg-color, .button__icon, svg, i {
+        fill: $color-black!important;
+        color: $color-black!important;
+      }
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: $mq-xs) { 
+
+  .cky-consent-container {
+    .cky-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: .5rem;
+      }
+    }
+
+    .navbar.project {
+      .button-about {
+        color: $color-black;
+        background: $color-white-05;
+        border: 1px solid $color-white-10;
+        .svg-color, .button__icon, svg, i {
+          fill: $color-black;
+          color: $color-black;
+        }
+        &.light {
+          color: $color-black;
+          background: $color-white-05;
+          border: 1px solid $color-white-10;
+          .svg-color, .button__icon, svg, i {
+            fill: $color-black;
+            color: $color-black;
+          }
+        }
+      }
+    }
+
+}

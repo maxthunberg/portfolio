@@ -1,0 +1,102 @@
+
+[tooltip-content] {
+
+}
+
+[tooltip-content]::before {
+    content: "";
+    position: absolute;
+    top:-6px;
+    left:50%;
+    transform: translateX(-50%);
+    border-width: .25rem .25rem 0 .25rem;
+    border-style: solid;
+    border-color: $color-dark transparent transparent transparent;
+    box-shadow: $box-shadow-one;
+    z-index: 99;
+    opacity:0;
+    transition: $transition--enter__fast;
+}
+
+[tooltip-position='left']::before{
+  left:0%;
+  top:50%;
+  margin-left:-10px;
+  transform:translatey(-50%) rotate(-90deg)
+}
+[tooltip-position='top']::before{
+  left:50%;
+}
+[tooltip-position='bottom']::before{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+}
+[tooltip-position='right']::before{
+  left:100%;
+  top:50%;
+  margin-left:2px;
+  transform:translatey(-50%) rotate(90deg)
+}
+
+[tooltip-content]::after {
+    content: attr(tooltip-content);
+    position: absolute;
+    left:50%;
+    top:-6px;
+    transform: translateX(-50%) translateY(-100%);
+    background: $color-dark;
+    text-align: center;
+    color: $color-white;
+    padding: .25rem .5rem;
+    font-size: 10px;
+    min-width: 80px;
+    border-radius: .25rem;
+    pointer-events: none;
+    padding: 4px 4px;
+    z-index:99;
+    opacity:0;
+    box-shadow: $box-shadow-one;
+    transition: $transition--enter__fast;
+}
+
+[tooltip-position='left']::after{
+  left:0%;
+  top:50%;
+  margin-left:-8px;
+  transform: translateX(-100%)   translateY(-50%);
+}
+[tooltip-position='top']::after{
+  left:50%;
+}
+[tooltip-position='bottom']::after{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translateY(0%);
+}
+[tooltip-position='right']::after{
+  left:100%;
+  top:50%;
+  margin-left:8px;
+  transform: translateX(0%)   translateY(-50%);
+}
+
+@media (hover: hover) {
+
+
+  [tooltip-content]:hover::after,[tooltip-content]:hover::before {
+     opacity:1;
+     box-shadow: $box-shadow-three;
+     transition: $transition--exit__fast;
+  }
+
+}
+
+
+@media screen and (max-width: $mq-sm) {
+
+  [tooltip-content]::before, [tooltip-content]::after {
+    display: none;
+  }
+
+}

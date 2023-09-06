@@ -1,0 +1,118 @@
+@keyframes floating {
+
+  0% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  50% {
+    -moz-transform: translate(0%, .5rem);
+    -ms-transform: translate(0%, .5rem);
+    -webkit-transform: translate(0%, .5rem);
+    transform: translate(0%, .5rem);
+  }
+  100% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes floatingGrid {
+
+  0% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  50% {
+    -moz-transform: translate(0%, .5rem);
+    -ms-transform: translate(0%, .5rem);
+    -webkit-transform: translate(0%, .5rem);
+    transform: translate(0%, .5rem);
+  }
+  100% {
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+$floatingPrev: floating 3s cubic-bezier(.62,0,.57,1) 0s infinite;
+$floatingActive: floating 3s cubic-bezier(.62,0,.57,1) 0.75s infinite;
+$floatingNext: floating 3s cubic-bezier(.62,0,.57,1) 1.5s infinite;
+
+$floatingGridOne: floatingGrid 3s cubic-bezier(.62,0,.57,1) 0s infinite;
+$floatingGridTwo: floatingGrid 3s cubic-bezier(.62,0,.57,1) 0.5s infinite;
+$floatingGridThree: floatingGrid 3s cubic-bezier(.62,0,.57,1) 1s infinite;
+$floatingGridFour: floatingGrid 3s cubic-bezier(.62,0,.57,1) 0.25s infinite;
+$floatingGridFive: floatingGrid 3s cubic-bezier(.62,0,.57,1) 0.75s infinite;
+$floatingGridSix: floatingGrid 3s cubic-bezier(.62,0,.57,1) 1.25s infinite;
+
+
+.swiper-slide-prev .card.floating {
+  -webkit-animation: $floatingPrev;
+  -moz-animation: f$floatingPrev;
+  -ms-animation: $floatingPrev;
+  animation: $floatingPrev;
+}
+
+.swiper-slide-active .card.floating {
+  -webkit-animation: $floatingActive;
+  -moz-animation: f$floatingActive;
+  -ms-animation: $floatingActive;
+  animation: $floatingActive;
+}
+
+.swiper-slide-next .card.floating {
+  -webkit-animation: $floatingNext;
+  -moz-animation: f$floatingNext;
+  -ms-animation: $floatingNext;
+  animation: $floatingNext;
+}
+
+.card-link:nth-child(1) .card.grid.floating {
+  -webkit-animation: $floatingGridOne;
+  -moz-animation: $floatingGridOne;
+  -ms-animation: $floatingGridOne;
+  animation: $floatingGridOne;
+}
+
+.card-link:nth-child(2) .card.grid.floating {
+  -webkit-animation: $floatingGridTwo;
+  -moz-animation: $floatingGridTwo;
+  -ms-animation: $floatingGridTwo;
+  animation: $floatingGridTwo;
+}
+
+.card-link:nth-child(3) .card.grid.floating {
+  -webkit-animation: $floatingGridThree;
+  -moz-animation: $floatingGridThree;
+  -ms-animation: $floatingGridThree;
+  animation: $floatingGridThree;
+}
+
+.card-link:nth-child(4) .card.grid.floating {
+  -webkit-animation: $floatingGridFour;
+  -moz-animation: $floatingGridFour;
+  -ms-animation: $floatingGridFour;
+  animation: $floatingGridFour;
+}
+
+.card-link:nth-child(5) .card.grid.floating {
+  -webkit-animation: $floatingGridFive;
+  -moz-animation: $floatingGridFive;
+  -ms-animation: $floatingGridFive;
+  animation: $floatingGridFive;
+}
+
+.card-link:nth-child(6) .card.grid.floating {
+  -webkit-animation: $floatingGridSix;
+  -moz-animation: $floatingGridSix;
+  -ms-animation: $floatingGridSix;
+  animation: $floatingGridSix;
+}

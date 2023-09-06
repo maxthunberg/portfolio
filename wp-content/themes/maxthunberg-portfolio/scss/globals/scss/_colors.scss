@@ -1,0 +1,50 @@
+$color-white: #ffffff;
+$color-white--filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(105%) contrast(101%);
+$color-white-03: #F2F5F7;
+$color-white-05: #E7EAED;
+$color-white-10: #DCE0E2;
+$color-white-15: #D1D5D8;
+$color-white-20: #C6CACD;
+$color-white-20--filter: invert(70%) sepia(2%) saturate(1783%) hue-rotate(166deg) brightness(85%) contrast(84%);
+$color-grey: #314156;
+$color-grey--filter: invert(36%) sepia(12%) saturate(747%) hue-rotate(164deg) brightness(83%) contrast(76%);
+$color-dark: #263241;
+$color-dark--filter: invert(36%) sepia(12%) saturate(747%) hue-rotate(164deg) brightness(83%) contrast(76%);
+$color-black: #171E27;
+$color-black--filter: invert(8%) sepia(11%) saturate(1552%) hue-rotate(166deg) brightness(93%) contrast(86%);
+
+$color-error: #E7384F;
+$color-links: #7C7CF5;
+$color-border: rgba($color-black, .1);
+
+$color-primary: #7C7CF5;
+$color-secondary: #7C7CF5;
+
+// Image Archive discoverability
+$project-01: #FEBD52;
+$project-01-light: #FEBD52;
+
+// Checkout Page Optimisation
+$project-02: #E0E6EA;
+$project-02-light: #E0E6EA;
+
+// Make Product Preview Better
+$project-03: #14213D;
+$project-03-light: #14213D;
+
+// Typeface design
+$project-04: #6565F3;
+$project-04-light: #7C7CF5;
+
+// Express Delivery Redesign
+$project-05: #022A3A;
+$project-05-light: #35647E;
+
+// Sendify Illustrations
+$project-06: #FF6041;
+$project-06-light: #FA8334;
+
+// Social Media
+$color-linkedin: #0077B5;
+$color-instagram: #d6249f;
+$color-instagram-gradient: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);

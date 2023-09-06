@@ -1,0 +1,78 @@
+<?php if( have_rows('about_section') ):
+
+while( have_rows('about_section') ): the_row();
+
+	// vars
+	$subheading = get_sub_field('subheading');
+	$heading = get_sub_field('heading');
+	$paragraph = get_sub_field('paragraph', false, false);
+	$basic = get_sub_field('basic');
+	$advanced = get_sub_field('advanced');
+	$image = get_sub_field('image');
+	$alt = get_sub_field('alt_text');
+
+	?>
+
+	<div class="grid about-section">
+
+		<div class="grid-container">
+
+			<div class="contact--content">
+
+					<h4 class="sub-heading-three "><?= $subheading ?></h4>
+
+					<h1 class="heading-two"><?= $heading ?></h1>
+
+					<p class="paragraph"><?= $paragraph ?></p>
+
+					<?php if( have_rows('social_media') ):?>
+						<div class="contact--social">
+							<?php	while( have_rows('social_media') ): the_row();
+
+							// vars
+							$link = get_sub_field('link');
+							$url = $link['url'];
+							$label = $link['title'];
+							$icon = get_sub_field('icon');
+							$tooltipContent = get_sub_field('tooltip_content');
+							$tooltipPosition = get_sub_field('tooltip_position');
+							?>
+
+							<a href="<?= $url ?>" target="_blank">
+								<div class="contact--social__icon contact--social__<?= strtolower($label) ?>" tooltip-content="<?= $tooltipContent ?>" tooltip-position="<?= $tooltipPosition ?>">
+									<?php echo file_get_contents( $icon ); ?>
+								</div>
+							</a>
+
+						<?php endwhile; ?>
+
+					</div>
+
+				<?php endif; ?>
+
+			</div>
+
+
+				<div class="contact--image">
+
+				<?php	if( !empty($image) ):
+
+									echo add_image(
+										$image,  // ACF-field
+										'g_south,q_70,c_fill,f_auto', // Parameters
+										'contact--image__img', // Classes
+										$alt // alt text
+									);
+
+								endif; ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+<?php endwhile; ?>
+
+<?php endif; ?>

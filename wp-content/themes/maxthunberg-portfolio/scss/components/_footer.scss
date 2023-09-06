@@ -1,0 +1,29 @@
+.footer.hide {
+  bottom: -6rem;
+  transition: $transition--enter__normal;
+}
+
+  .footer {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -3rem;
+    @include addFlex(0,flex-end,center,0);
+    width: 6rem;
+    height: 64px;
+    z-index: 8000;
+    transition: $transition--enter__normal;
+    .button-prev {
+      margin-right: .5rem;
+    }
+  }
+
+
+
+@media screen and (max-width: $mq-sm) {
+
+  .footer {
+    bottom: 1rem;
+  }
+
+}

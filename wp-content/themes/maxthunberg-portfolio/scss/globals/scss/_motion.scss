@@ -1,0 +1,29 @@
+$easing--exit: cubic-bezier(.62,0,.57,1);
+$easing--enter: cubic-bezier(.62,0,.57,1);
+
+// $easing--exit: cubic-bezier(0.4, 0.0, 1, 1);
+// $easing--enter: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+// Duration
+$duration--instant: 0ms;
+
+$duration--fast__enter: 150ms;
+$duration--fast__exit: 100ms;
+
+$duration--normal__enter: 250ms;
+$duration--normal__exit: 200ms;
+
+$duration--slow__enter: 500ms;
+$duration--slow__exit: 450ms;
+
+// Enter transitions
+$transition--enter__instant: all $duration--instant $easing--enter;
+$transition--enter__fast: all $duration--fast__enter $easing--enter;
+$transition--enter__normal: all $duration--normal__enter $easing--enter;
+$transition--enter__slow: all $duration--slow__enter $easing--enter;
+
+// Exit transitions
+$transition--exit__instant: all $duration--instant $easing--exit;
+$transition--exit__fast: all $duration--fast__exit $easing--exit;
+$transition--exit__normal: all $duration--normal__exit $easing--exit;
+$transition--exit__slow: all $duration--slow__exit $easing--exit;

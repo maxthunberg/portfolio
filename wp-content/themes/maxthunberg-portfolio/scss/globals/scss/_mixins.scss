@@ -1,0 +1,109 @@
+@mixin text-overflow($width: false) {
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  // apply a width if width parameter exists
+  @if ($width) {
+    width: $width;
+  }
+}
+
+@mixin placeholder-colors {
+  color: $text-03;
+}
+
+@mixin box-shadow($size: 'small') {
+  // Large - For dropdowns
+  @if ($size == 'large') {
+    box-shadow: 6px 6px 6px 0 $box-shadow;
+  }
+
+  @if ($size == 'small') {
+    box-shadow: 0px 3px 3px 0 $box-shadow;
+  }
+}
+
+@mixin focus-outline($type: 'border') {
+  @if ($type == 'border') {
+    outline: 1px solid $color-white-20;
+  }
+
+  @if ($type == 'blurred') {
+    box-shadow: 0 0 0 3px $color-white-20;
+    outline: 1px solid transparent;
+  }
+}
+
+@mixin rotate($deg, $speed, $origin: center) {
+  transform: rotate($deg);
+  transition: transform $speed;
+  transform-origin: $origin;
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  visibility: visible;
+  white-space: nowrap;
+}
+
+@mixin button-reset($width: true) {
+  @include reset;
+  @include pt-serif;
+  @include font-smoothing;
+  @include letter-spacing;
+  display: inline-block;
+  background: none;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  @if ($width == true) {
+    width: 100%;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+
+@import 'flexbox';
+
+@mixin addFlex($direction, $align, $justify, $wrap) {
+
+  @include flexbox;
+
+  // $direction = row | row-reverse | column | column-reverse
+  @if ( $direction != 0 ) {
+    @include flex-direction($direction);
+  }
+
+  // $align =  flex-start | flex-end | center | baseline | stretch
+  @if ( $align != 0 ) {
+      @include align-items($align);
+  }
+
+  // $justify = flex-start | flex-end | center | space-between | space-around
+  @if ( $justify != 0 ) {
+      @include justify-content($justify);
+  }
+
+  // $wrap = nowrap | wrap | wrap-reverse
+  @if ( $wrap != 0 ) {
+      @include flex-wrap($wrap);
+  }
+}
+
+@mixin row-center-center {
+  @include flexbox();
+}

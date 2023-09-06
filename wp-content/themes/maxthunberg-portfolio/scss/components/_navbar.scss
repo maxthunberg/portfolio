@@ -1,0 +1,115 @@
+.navbar {
+  @include addFlex(0,center,0,0);
+  position: fixed;
+  width: 100%;
+  height: 3rem;
+  top: 2rem;
+  z-index: 8000;
+  transition: $transition--enter__normal;
+
+  &.hide {
+  top: -6rem;
+  transition: $transition--exit__normal;
+  }
+
+  .link {
+    &.logo {
+      position: absolute;
+      left: 2rem;
+    }
+  }
+
+  .button-about {
+    position: absolute;
+    right: 2rem;
+  }
+
+  .button-projects {
+    position: absolute;
+    right: 2rem;
+  }
+
+  .button-back {
+    position: absolute;
+    left: 2rem;
+  }
+  
+}
+
+.navbar .display-mode {
+  @include addFlex(column,center,center,0);
+  position: absolute;
+  width: 4rem;
+  left: 50%;
+  margin-left: -2rem;
+  z-index: 100;
+  transition: $transition--enter__normal;
+  .caption {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    width: 8rem;
+    text-align: center;
+    margin-top: .5rem;
+  }
+  .icons{
+    @include addFlex(0,0,0,0);
+  }
+
+}
+
+
+.ui-light {
+  .navbar--back {
+    position: absolute;
+    left: 0;
+    .navbar--back__button {
+      color: $color-black;
+    }
+  }
+}
+.ui-dark {
+  .navbar--back {
+    position: absolute;
+    left: 0;
+    .navbar--back__button {
+      color: $color-white;
+    }
+  }
+}
+
+@media screen and (max-width: $mq-sm) {
+
+  .navbar {
+    top: 1rem;
+    .link {
+      &.logo {
+        position: absolute;
+        left: 1rem;
+      }
+      &.about {
+        right: 1rem;
+      }
+    }
+
+    .button-about {
+      right: 1rem;
+    }
+
+    .button-projects {
+      right: 1rem;
+    }
+
+    .button-back {
+      left: 1rem;
+    }
+    
+  }
+
+  .navbar .display-mode {
+    .caption {
+      display: none!important;
+    }
+  }
+
+}

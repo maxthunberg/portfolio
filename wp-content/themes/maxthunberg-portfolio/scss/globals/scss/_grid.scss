@@ -1,0 +1,55 @@
+.grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  &.flex-start {
+    justify-content: flex-start;
+  }
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.grid-fullwidth {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  .grid-container {
+    max-width: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.flex-start {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: $mq-sm) {
+
+  .grid-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    &.flex-start {
+      justify-content: flex-start;
+    }
+    &.column {
+      flex-direction: column;
+    }
+  }
+
+}

@@ -1,0 +1,304 @@
+.swiper-container.swiper-container-horizontal {
+  width: 100vw;
+  height: 100vh;
+  .swiper-wrapper {
+    @include addFlex(0,center,0,0);
+    transition: cubic-bezier(.47,0,.63,1);
+    .swiper-slide.horizontal.card-link {
+      @include addFlex(0,center,center,0);
+      height: calc(100% - 12rem);
+      width: 60%;
+      min-width: 640px;
+      max-height: 544px;
+      min-height: 352px;
+      border-radius: 1rem;
+      transition: $transition--exit__fast;
+    }
+  }
+  &.hide {
+    display: none; 
+  }
+}
+
+// Card & Hero
+
+.card-link {
+  @include addFlex(0,center,center,0);
+  text-decoration: none;
+}
+
+.card, .hero {
+  @include addFlex(0,center,center,0);
+  position: absolute;
+  height: calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: $transition--enter__normal;
+
+  .left-container {
+    @include addFlex(column,flex-start,center,0);
+    height: 100%;
+    width: 50%;
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    z-index: 2;
+    transition: $transition--enter__normal;
+    h2, h5 {
+      width: 100%;
+      max-width: 352px;
+      transition: $transition--enter__normal;
+    }
+  }
+  .right-container {
+    width: 50%;
+    height: 100%;
+    @include addFlex(0,center,0,0);
+    z-index: 1;
+    img {
+      max-width: 480px;
+      height: auto;
+      width: auto;
+      transition: $transition--enter__normal;
+    }
+  }
+
+  &.carousel {
+
+  }
+
+  &.grid {
+    position: relative;
+    .left-container {
+      width: calc(100% / 3 * 2);
+      padding: 1.5rem .5rem 1.5rem 1.5rem;
+      h2, h5 {
+      }
+    }
+    .right-container {
+      width: calc(100% / 3);
+      height: 320px;
+      img {
+        height: 130%;
+        width: 100%;
+        object-fit: cover;
+        object-position: left center;
+      }
+    }
+  }
+
+  &.overview {
+    position: relative;
+    .left-container {
+      width: calc(100% / 3 * 2);
+      padding: 1.5rem .5rem 1.5rem 1.5rem;
+      h2, h5 {
+        margin-left: 0;
+      }
+    }
+    .right-container {
+      width: calc(100% / 3);
+      max-height: 256px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: left center;
+      }
+    }
+  }
+
+}
+
+
+@media (hover: hover) {
+
+  .card {
+    &:hover {
+      height: 100%;
+      width: 100%;
+      transition: $transition--exit__normal;
+      cursor: pointer;
+      .left-container {
+        h2, h5 {
+          width: calc(100% - .66666rem);
+          margin-left: .5rem;
+          transition: $transition--exit__normal;
+        }
+      }
+    }
+  }
+
+}
+
+
+// Expanded card & Hero
+
+.card.click, .hero {
+  width: 100vw;
+  height: 100vh;
+  max-height: none;
+  margin-top: 0;
+  border-radius: 0;
+  transition: $transition--enter__normal;
+    .left-container {
+      padding: 4rem 0rem 4rem 6rem;
+      transition: $transition--enter__normal;
+      h2, h5 {
+        margin-left: 0;
+        transition: $transition--exit__normal;
+      }
+    }
+    .right-container {
+      img {
+        width: auto;
+        margin-top: 0;
+      }
+    }
+}
+
+.card.click {
+  position: absolute;
+}
+
+.hero {
+  position: relative;
+}
+
+// Card with dark text
+  .card.project-1,
+  .card.project-2,
+  .card-sm.project-1,
+  .card-sm.project-2, 
+  .image-archive-discoverability--gradient,
+  .checkout-page-optimisation--gradient {
+    h5 {
+      color: $color-dark!important;
+    }
+    h2 {
+      color: $color-black!important;
+    }
+  }
+
+@media screen and (max-width: $mq-xl) { // <1440px
+
+}
+
+@media screen and (max-width: $mq-lg) { // <1280px
+
+}
+
+@media screen and (max-width: $mq-md) { // <1024px
+
+}
+
+@media screen and (max-width: $mq-sm) { // <768 px
+
+  .swiper-container.swiper-container-horizontal {
+    .swiper-wrapper {
+      .swiper-slide.horizontal.card-link {
+        height: 100%;
+        width: calc(100% - 2rem);
+        min-width: unset;
+        max-height: calc(100% - 10rem);
+      }
+    }
+  }
+
+  .card, .hero {
+    @include addFlex(column,0,flex-start,0);
+      height: 100%;
+      width: 100%;
+    .left-container {
+      @include addFlex(column,0,0,0);
+      width: 100%;
+      padding: 3rem 1.5rem 0rem 1.5rem;
+    }
+    .right-container {
+      width: 100%;
+      height: 100%;
+      @include addFlex(0,center,center,0);
+      img {
+        max-height: 140%;
+        max-width: calc(100% - 2rem);
+        height: auto;
+        width: auto;
+        transition: $transition--enter__normal;
+      }
+    }
+
+    &.grid {
+      @include addFlex(row,0,flex-start,0);
+      .right-container {
+        height: 192px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &.overview {
+      @include addFlex(row,0,flex-start,0);
+      .right-container {
+        height: 192px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+
+  }
+
+  @media (hover: hover) {
+
+    .card, .hero {
+      &:hover {
+        .left-container {
+          h2, h5 {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+  .card.click, .hero {
+    height: 100vh;
+    .left-container {
+      padding: 6rem 1.5rem 1rem 1.5rem;
+    }
+  }
+
+}
+
+@media screen and (max-width: $mq-xs) { // <576 px
+
+.swiper-container.swiper-container-horizontal {
+  height: 100%;
+}
+
+// .hero-link {
+//   @include addFlex(0, center, center, 0);
+//   background-color: $color-white-03;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   height: 100%;
+//   width: 100%;
+//   .hero {
+//     height: 100%;
+//     width: calc(100% - 2rem);
+//     min-width: unset;
+//     max-height: calc(100% - 10rem);
+//     border-radius: 1rem;
+//     overflow: hidden;
+//     transition: $transition--enter__normal;
+//     .left-container {
+//       padding: 3rem 1.5rem 0rem 1.5rem;
+//     }
+//   } 
+// }
+
+}
